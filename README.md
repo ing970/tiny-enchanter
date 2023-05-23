@@ -7,5 +7,8 @@
 - 파이널 프로젝트 sample repository 입니다.
 - Stable diffusion 모델을 이용한 서비스 입니다.
 
-### 로고이미지 예시
+### 📍 로고이미지 예시
 ![logo](logo.png)
+
+### 📍 ERD
+![ERD](ERD.png)
