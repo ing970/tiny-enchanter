@@ -11,4 +11,4 @@
 ![logo](logo.png)
 
 ### 📍 ERD
-![ERD](ERD.png)
+![ERD](ERD.png){: width="300" height="300"}
