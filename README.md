@@ -8,7 +8,7 @@
 - Stable diffusion 모델을 이용한 서비스 입니다.
 
 ### 📍 로고이미지 예시
-![logo](logo.png)
+<img src = "https://blog.kakaocdn.net/dn/9F50S/btshbfgGNPT/9JRiEYWoOo68jKWbzZfK2k/img.png" width = "500" height = "630"/>
 
 ### 📍 ERD
-<img src = "https://blog.kakaocdn.net/dn/66gTe/btshiiiP0ze/fua9KM7ABNobWFQ0rjas5K/img.png" width = "250" height = "250"/>
+<img src = "https://blog.kakaocdn.net/dn/66gTe/btshiiiP0ze/fua9KM7ABNobWFQ0rjas5K/img.png" width = "500" height = "500"/>
