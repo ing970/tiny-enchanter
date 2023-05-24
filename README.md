@@ -11,4 +11,4 @@
 ![logo](logo.png)
 
 ### 📍 ERD
-![ERD](ERD.png){: width="300" height="300"}
+<img src = "https://blog.kakaocdn.net/dn/66gTe/btshiiiP0ze/fua9KM7ABNobWFQ0rjas5K/img.png" width = "250" height = "250"/>
