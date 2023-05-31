@@ -121,8 +121,21 @@ INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Che
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0201, 02, 01, 'animal ears', NULL);
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0301, 03, 01, 'short hair', NULL);
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0302, 03, 02, 'long hair', NULL);
-INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0401, 04, 01, '{color} hair', NULL);
-INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0501, 05, 01, '{color} eyes', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0401, 04, 01, 'red hair', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0402, 04, 02, 'orange hair', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0403, 04, 03, 'yellow hair', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0404, 04, 04, 'green hair', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0405, 04, 05, 'blue hair', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0406, 04, 06, 'purple hair', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0407, 04, 07, 'black hair', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0408, 04, 08, 'white hair', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0501, 05, 01, 'red eyes', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0502, 05, 02, 'orange eyes', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0503, 05, 03, 'yellow eyes', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0504, 05, 04, 'green eyes', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0505, 05, 05, 'blue eyes', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0506, 05, 06, 'purple eyes', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0507, 05, 07, 'black eyes', NULL);
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0601, 06, 01, 'tail', NULL);
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0701, 07, 01, 'hair ribbon', NULL);
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0702, 07, 02, 'hair clip', NULL);
@@ -138,6 +151,7 @@ INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Che
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0806, 08, 06, 'school uniform', NULL);
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0807, 08, 07, 'pajama', NULL);
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0000, 00, 00, '(chibi), anime drawing, simple, only chracter, full body, the front of full body, standing, 4K, 8K, best quality, masterpiece, (white background), solo', '(jpeg artifacts), (blurry), (blurred), (blur), bad anatomy, worst quality, bad quality, disfigured, deformed, malformed, mutant, gross, disgusting, out of frame, monochrome, poorly drawn, extra limbs, extra fingers, missing limbs, misshaped, poorly drawn, mutated hands and fingers, ugly, fat, cubism, text, logo, duplicate, bad eyes, misaligned eyes, deformed mouth, lowres, signature, watermark, username, dots, error, cropped, easynegative');
+
 
 COMMIT;
 
@@ -165,7 +179,20 @@ INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `C
 INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('2030101', 2, 0301, 01);
 INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('2030201', 2, 0302, 01);
 INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3040101', 3, 0401, 01);
+INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3040201', 3, 0402, 01);
+INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3040301', 3, 0403, 01);
+INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3040401', 3, 0404, 01);
+INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3040501', 3, 0405, 01);
+INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3040601', 3, 0406, 01);
+INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3040701', 3, 0407, 01);
+INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3040801', 3, 0408, 01);
 INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3050101', 3, 0501, 01);
+INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3050201', 3, 0502, 01);
+INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3050301', 3, 0503, 01);
+INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3050401', 3, 0504, 01);
+INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3050501', 3, 0505, 01);
+INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3050601', 3, 0506, 01);
+INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3050701', 3, 0507, 01);
 INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3060101', 3, 0601, 01);
 INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3070101', 3, 0701, 01);
 INSERT INTO `NINI`.`client_order` (`Serial_id`, `Serial_type`, `Checkbox_id`, `Cp_model_id`) VALUES ('3070201', 3, 0702, 01);
