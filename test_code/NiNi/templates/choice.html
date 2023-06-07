@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>NiNi</title>
+        <link rel="stylesheet" href="../static/css/choice.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spoqa Han Sans Neo:wght@300;500;700&display=swap">
+    </head>
+    <body>
+        <div class="choice">
+            <div class="header">
+                <img class="logo" alt="logo" src="../static/image/logo.svg">
+                <a class="btn-nini" href="/index" id="niNi">
+                    <div class="nini">NiNi</div>
+                </a>
+                <a class="btn-home" href="/index" id="home">
+                    <b>Home</b>
+                </a>
+                <a class="btn-aboutus" href="/aboutus" id="aboutUs">
+                    <img class="aboutus" alt="about_us" src="../static/image/about-us.svg">
+                    <b class="aboutus-text">About US</b>
+                </a>
+            </div>
+
+            <div class="main-left">
+                <img class="icon6" alt="icon6" src="../static/image/icon6.svg">
+                <div class="slideshow-container">
+                    <div class="slide">
+                        <img src="../static/image/image1.png" alt="image1">
+                    </div>
+                    <div class="slide">
+                        <img src="../static/image/image2.png" alt="image2">
+                    </div>
+                    <div class="slide">
+                        <img src="../static/image/image3.png" alt="image3">
+                    </div>
+                    <div class="slide">
+                        <img src="../static/image/image4.png" alt="image4">
+                    </div>
+                    <div class="slide">
+                        <img src="../static/image/image5.png" alt="image5">
+                    </div>
+                    <div class="slide">
+                        <img src="../static/image/image6.png" alt="image6">
+                    </div>
+                    <div class="slideshow-dots">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="slideshow-button prev" onclick="plusSlides(-1)"></button>
+                    <button class="slideshow-button next" onclick="plusSlides(1)"></button>
+                </div>
+                <img class="icon7" alt="icon7" src="../static/image/icon7.svg">
+            </div>
+
+            <div class="line"></div>
+
+            <div class="main-right">
+                <form action="/result" method="post">
+                    <div class="choice1">
+                        <div class="category">성별</div>
+                        <label class="default">
+                            <input type="radio" class="radio-input" name="gender" value="01" checked="checked">여자
+                        </label>
+                        <label class="select">
+                            <input type="radio" class="radio-input" name="gender" value="02">남자
+                        </label>
+                    </div>
+                    <div class="choice2">
+                        <div class="category">동물 귀</div>
+                        <label class="default">
+                            <input type="radio" class="radio-input" name="animalears" value="01" checked>없음
+                        </label>
+                        <label class="select2">
+                            <input type="radio" class="radio-input" name="animalears" value="02">있음
+                        </label>
+                    </div>
+                    <div class="choice3">
+                        <div class="category">꼬리</div>
+                        <label class="default">
+                            <input type="radio" class="radio-input" name="tail" value="01" checked>없음
+                        </label>
+                        <label class="select3">
+                            <input type="radio" class="radio-input" name="tail" value="02" disabled>고양이
+                        </label>
+                        <label class="select3-2">
+                            <input type="radio" class="radio-input" name="tail" value="03" disabled>강아지
+                        </label>
+                    </div>
+                    <div class="choice4">
+                        <div class="category">머리 스타일</div>
+                        <label class="default">
+                            <input type="radio" class="radio-input" name="hairstyle" value="01" checked>단발
+                        </label>
+                        <label class="select4">
+                            <input type="radio" class="radio-input" name="hairstyle" value="02">장발
+                        </label>
+                        <label class="select4-2">
+                            <input type="radio" class="radio-input" name="hairstyle" value="03">양갈래 머리
+                        </label>
+                        <label class="select4-3">
+                            <input type="radio" class="radio-input" name="hairstyle" value="04">똥 머리
+                        </label>
+                        <label class="select4-4">
+                            <input type="radio" class="radio-input" name="hairstyle" value="05">땋은 머리
+                        </label>
+                        <label class="select4-5">
+                            <input type="radio" class="radio-input" name="hairstyle" value="06">포니테일
+                        </label>
+                    </div>
+                    <div class="choice5">
+                        <div class="category">머리장식</div>
+                        <label class="default">
+                            <input type="radio" class="radio-input" name="hairornament" value="01" checked>없음
+                        </label>
+                        <label class="select5">
+                            <input type="radio" class="radio-input" name="hairornament" value="02">헤어 핀
+                        </label>
+                        <label class="select5-2">
+                            <input type="radio" class="radio-input" name="hairornament" value="03">꽃
+                        </label>
+                        <label class="select5-3">
+                            <input type="radio" class="radio-input" name="hairornament" value="04">리본
+                        </label>
+                        <label class="select5-4">
+                            <input type="radio" class="radio-input" name="hairornament" value="05">모자
+                        </label>
+                    </div>
+                    <div class="choice6">
+                        <div class="category">머리 색</div>
+                        <div class="palette"></div>
+                        <div class="pencil">
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="hair-color" value="01">
+                                <img alt="pink" src="../static/image/pencil-pink.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="hair-color" value="02">
+                                <img alt="red" src="../static/image/pencil-red.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="hair-color" value="03">
+                                <img alt="orange" src="../static/image/pencil-orange.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="hair-color" value="04" checked>
+                                <img alt="blond" src="../static/image/pencil-yellow.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="hair-color" value="05">
+                                <img alt="green" src="../static/image/pencil-green.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="hair-color" value="06">
+                                <img alt="blue" src="../static/image/pencil-blue.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="hair-color" value="07">
+                                <img alt="purple" src="../static/image/pencil-purple.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="hair-color" value="08">
+                                <img alt="brown" src="../static/image/pencil-brown.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="hair-color" value="09">
+                                <img alt="white" src="../static/image/pencil-white.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="hair-color" value="10">
+                                <img alt="black" src="../static/image/pencil-black.svg">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="choice7">
+                        <div class="category">눈 색</div>
+                        <div class="palette"></div>
+                        <div class="pencil2">
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="eyes-color" value="01">
+                                <img alt="pink" src="../static/image/pencil-pink.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="eyes-color" value="02">
+                                <img alt="red" src="../static/image/pencil-red.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="eyes-color" value="03">
+                                <img alt="orange" src="../static/image/pencil-orange.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="eyes-color" value="04">
+                                <img alt="yellow" src="../static/image/pencil-yellow.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="eyes-color" value="05">
+                                <img alt="green" src="../static/image/pencil-green.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="eyes-color" value="06" checked>
+                                <img alt="blue" src="../static/image/pencil-blue.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="eyes-color" value="07">
+                                <img alt="purple" src="../static/image/pencil-purple.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="eyes-color" value="08">
+                                <img alt="brown" src="../static/image/pencil-brown.svg">
+                            </label>
+                            <label class="radio-image-label">
+                                <input type="radio" class="radio-image-input" name="eyes-color" value="09">
+                                <img alt="black" src="../static/image/pencil-black.svg">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="choice8">
+                        <div class="category">옷 스타일</div>
+                        <label class="default">
+                            <input type="radio" class="radio-input" name="clothes" value="01" checked>한복
+                        </label>
+                        <label class="select8">
+                            <input type="radio" class="radio-input" name="clothes" value="02">드레스
+                        </label>
+                        <label class="select8-2">
+                            <input type="radio" class="radio-input" name="clothes" value="03">기모노
+                        </label>
+                        <label class="select8-3">
+                            <input type="radio" class="radio-input" name="clothes" value="04">무녀복
+                        </label>
+                        <label class="select8-4">
+                            <input type="radio" class="radio-input" name="clothes" value="05">교복
+                        </label>
+                        <label class="select8-5">
+                            <input type="radio" class="radio-input" name="clothes" value="06">잠옷
+                        </label>
+                    </div>
+                    <button type="submit" class="generate" id="generate">
+                        <div class="generate-box"></div>
+                        <div class="generate-text">Generate</div>
+                        <img class="generate-item" alt="rectangle" src="../static/image/rectangle.svg">
+                    </button>
+                </form>
+            </div>
+        </div>
+        <script>
+            var niNi = document.getElementById("niNi");
+            if (niNi) {
+                niNi.addEventListener("click", function (e) {
+                    window.location.href = "/index";
+              });
+            }
+            
+            var home = document.getElementById("home");
+            if (home) {
+                home.addEventListener("click", function (e) {
+                    window.location.href = "/index";
+              });
+            }
+            
+            var aboutUs = document.getElementById("aboutUs");
+            if (aboutUs) {
+                aboutUs.addEventListener("click", function (e) {
+                    window.location.href = "/aboutus";
+              });
+            }
+
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var slides = document.getElementsByClassName("slide");
+                var dots = document.getElementsByClassName("dot");
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                    dots[i].classList.remove("active");
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].classList.add("active");
+                setTimeout(showSlides, 3000);
+            }
+
+            function plusSlides(n) {
+                slideIndex += n;
+                var slides = document.getElementsByClassName("slide");
+                var dots = document.getElementsByClassName("dot");
+                if (slideIndex > slides.length) {slideIndex = 1}
+                if (slideIndex < 1) {slideIndex = slides.length}
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                    dots[i].classList.remove("active");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].classList.add("active");
+            }
+
+            var dotElements = document.getElementsByClassName("dot");
+            for (var i = 0; i < dotElements.length; i++) {
+                dotElements[i].addEventListener("click", function() {
+                    var slideIndex = Array.prototype.indexOf.call(dotElements, this);
+                    plusSlides(slideIndex + 1);
+                });
+            }
+
+            const animalearsRadios = document.getElementsByName("animalears");
+            const tailRadios = document.querySelectorAll('input[name="tail"]:not([value="01"])');
+
+            animalearsRadios.forEach(function(radio) {
+                radio.addEventListener("change", function() {
+                    if (radio.value === "01") {
+                        tailRadios.forEach(function(tailRadio) {
+                            tailRadio.disabled = true;
+                        });
+                        document.querySelector('input[name="tail"][value="01"]').disabled = false;
+                        document.querySelector('input[name="tail"][value="01"]').checked = true;
+                    } 
+                    else {
+                        tailRadios.forEach(function(tailRadio) {
+                            tailRadio.disabled = false;
+                        });
+                     }
+                });
+            });
+        </script>
+    </body>
+</html>

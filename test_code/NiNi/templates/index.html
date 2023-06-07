@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <title>NiNi</title>
+      <link rel="stylesheet" href="../static/css/index.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spoqa Han Sans Neo:wght@300;500;700&display=swap">
+    </head>
+    <body>
+        <div class="home">
+            <div class="header">
+                <img class="logo" alt="logo" src="../static/image/logo.svg">
+                <a class="btn-nini" href="/index" id="niNi">
+                    <div class="nini">NiNi</div>
+                </a>
+                <a class="btn-home" href="/index" id="home">
+                    <b>Home</b>
+                </a>
+                <a class="btn-aboutus" href="aboutus" id="aboutUs">
+                    <img class="abouts" alt="about_us" src="../static/image/about-us.svg">
+                    <b class="aboutus-text">About US</b>
+                </a>
+            </div>
+
+            <div class="main">
+                <b class="stablediffusion">
+                    <p class="stable">Stable</p>
+                    <p class="stable">Diffusion</p>
+                </b>
+                <img class="icon1" alt="icon1" src="../static/image/icon1.svg">
+                <b class="text">
+                    Stable Diffusion은 텍스트 입력이 주어지면 사진처럼 사실적인 이미지를 생성할 수 있는 잠재적 텍스트 대 이미지 확산 모델이며, 믿을 수 없는 이미지를 생성할 수 있는 자율적 자유를 배양하고, 수십억 명의 사람들이 몇 초 안에 놀라운 예술을 만들 수 있도록 지원합니다.
+                </b>
+                <img class="icon2" alt="icon2" src="../static/image/icon2.svg">
+                <a class="getstarted" href="/choice" id="getStarted">
+                    <div class="getstarted-box"></div>
+                    <div class="get-started">GET STARTED</div>
+                    <img class="getstarted-item" alt="rectangle" src="../static/image/rectangle.svg">
+                </a>
+                <img class="icon3" alt="icon3" src="../static/image/icon3.svg">
+                <img class="icon4" alt="icon4" src="../static/image/icon4.svg">
+                <img class="image" alt="testImage" src="../static/image/testImage.png">
+                <img class="icon5" alt="icon5" src="../static/image/icon5.svg">
+            </div>
+        </div>
+        <script>
+            var niNi = document.getElementById("niNi");
+            if (niNi) {
+                niNi.addEventListener("click", function (e) {
+                    window.location.href = "/index";
+              });
+            }
+            
+            var home = document.getElementById("home");
+            if (home) {
+                home.addEventListener("click", function (e) {
+                    window.location.href = "/index";
+              });
+            }
+            
+            var aboutUs = document.getElementById("aboutUs");
+            if (aboutUs) {
+                aboutUs.addEventListener("click", function (e) {
+                    window.location.href = "/aboutus";
+              });
+            }
+      
+            var getStarted = document.getElementById("getStarted");
+            if (getStarted) {
+                getStarted.addEventListener("click", function (e) {
+                    window.location.href = "/choice";
+              });
+            }
+        </script>
+    </body>
+</html>
