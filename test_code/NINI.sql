@@ -47,7 +47,7 @@ ENGINE = InnoDB;
 -- Table `NINI`.`client_order`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `NINI`.`client_order` (
-  `Serial_id` CHAR(7) NOT NULL,
+  `Serial_id` CHAR(5) NOT NULL,
   `Serial_type` INT NOT NULL,
   `Checkbox_id` INT NOT NULL,
   PRIMARY KEY (`Serial_id`),
@@ -75,15 +75,10 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `NINI`.`result` (
   `No` INT NOT NULL AUTO_INCREMENT,
-  `Serial_id` CHAR(7) NULL,
+  `Image` LONGBLOB,
   `Created_at` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`No`),
-  INDEX `fk_result_checkbox_idx` (`Serial_id` ASC) VISIBLE,
-  CONSTRAINT `fk_result_client_order`
-    FOREIGN KEY (`Serial_id`)
-    REFERENCES `NINI`.`client_order` (`Serial_id`)
-    ON DELETE RESTRICT
-    ON UPDATE RESTRICT)
+  PRIMARY KEY (`No`))
+  
 ENGINE = InnoDB;
 
 -- -----------------------------------------------------
@@ -147,13 +142,13 @@ INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Che
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0707, 07, 07, 'purple', NULL);
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0708, 07, 08, 'brown', NULL);
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0709, 07, 09, 'black', NULL);
-INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0801, 08, 01, '<lora:last1234:0.5>, (color) hanbok', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0801, 08, 01, '<lora:last1234:0.5>, red hanbok', NULL);
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0802, 08, 02, 'dress', NULL);
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0803, 08, 03, 'kimono', NULL);
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0804, 08, 04, 'hakama', NULL);
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0805, 08, 05, 'school uniform', NULL);
 INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0806, 08, 06, 'pajama', NULL);
-INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0899, 08, 99, '<lora:BlueSD:0.5>, <lora:maplestory20:.0.2>, <lora:GenshinStickers:0.7>, <lora:last:0.3>, hanbok, bandana', NULL);
+INSERT INTO `NINI`.`checkbox` (`Checkbox_id`, `Category_id`, `Type_number`, `Checkbox_p_prompt`, `Checkbox_n_prompt`) VALUES (0899, 08, 99, 'hanbok, bandana', NULL);
 
 COMMIT;
 
@@ -218,20 +213,12 @@ COMMIT;
 START TRANSACTION;
 USE `NINI`;
 INSERT INTO `NINI`.`checkpoint_model` (`Cp_model_id`, `Cp_model_name`) VALUES (01, 'qteamixQ_gamma');
-INSERT INTO `NINI`.`checkpoint_model` (`Cp_model_id`, `Cp_model_name`) VALUES (02, 'meinamix_meinaV9');
+INSERT INTO `NINI`.`checkpoint_model` (`Cp_model_id`, `Cp_model_name`) VALUES (02, 'meinamix_meinaV10');
 INSERT INTO `NINI`.`checkpoint_model` (`Cp_model_id`, `Cp_model_name`) VALUES (03, 'cetusMix_Coda2');
 
 COMMIT;
 
 
--- -----------------------------------------------------
--- Data for table `NINI`.`result`
--- -----------------------------------------------------
-START TRANSACTION;
-USE `NINI`;
-INSERT INTO `NINI`.`result` (`No`, `Serial_id`, `Created_at`) VALUES (1, NULL, NULL);
-
-COMMIT;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
