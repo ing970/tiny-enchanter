@@ -1,0 +1,451 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'GoryeongStrawberry';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/GoryeongStrawberry.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+.choice {
+  position: relative;
+  background-color: #ffe593;
+  box-sizing: border-box;
+  width: 100%;
+  height: 61.38rem;
+  overflow: hidden;
+  text-align: center;
+  font-size: 1rem;
+  color: #211919;
+  font-family: "Spoqa Han Sans Neo";
+}
+
+.header {
+  position: absolute;
+  width: 84.28rem;
+  height: 5.88rem;
+  top: 1.44rem;
+  left: 4rem;
+  font-size: 1.25rem;
+  color: #014656;
+}
+
+.logo {
+  position: absolute;
+  width: 5.88rem;
+  height: 5.88rem;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn-nini {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.nini {
+  position: absolute;
+  width: 6.56rem;
+  height: 4.06rem;
+  top: 0.88rem;
+  left: 7.5rem;
+  font-size: 3rem;
+  font-family: "GoryeongStrawberry";
+}
+
+.btn-home {
+  position: absolute;
+  width: 3.69rem;
+  height: 1.56rem;
+  top: 2rem;
+  left: 70.13rem;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.btn-aboutus {
+  position: absolute;
+  width: 8.8rem;
+  height: 3.22rem;
+  top: 1.23rem;
+  left: 75.42rem;
+  text-decoration: none;
+  cursor: pointer;
+  color: #F6A801;
+}
+
+.aboutus {
+  position: absolute;
+  width: 8.99rem;
+  height: 3.35rem;
+  top: -0.06rem;
+  left: -0.06rem;
+}
+
+.aboutus-text {
+  position: absolute;
+  width: 5.75rem;
+  height: 1.56rem;
+  top: 0.77rem;
+  left: 1.46rem;
+}
+
+.main-left {
+  position: absolute;
+  width: 49.1rem;
+  height: 43.71rem;
+  top: 12.13rem;
+  left: 1.88rem;
+}
+
+.icon6 {
+  position: absolute;
+  width: 49.1rem;
+  height: 43.71rem;
+  top: 0rem;
+  left: 0rem;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 35rem;
+  height: 35rem;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  width: 35rem;
+  height: 35rem;
+  top: 0;
+  left: 5.94rem;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 4%;
+}
+
+.slideshow-dots {
+  position: absolute;
+  top: 38.9rem;
+  left: 22.11rem;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0 0.25rem;
+  background-color: #FFF;
+  border-radius: 33px;
+  transition: transform 0.3s, background-image 0.3s;
+}
+
+.dot.active {
+  background-color: #014656;
+  width: 1.5rem;
+  height: 0.5rem;
+  border-radius: 33px;
+}
+
+.slideshow-button {
+  position: absolute;
+  top: 17.5rem;
+  transform: translateY(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+
+.next {
+  left: 37.19rem;
+  background-image: url("../image/next.svg");
+  background-size: cover;
+  opacity: 60%
+}
+
+.prev {
+  left: 7.19rem;
+  background-image: url("../image/prev.svg");
+  background-size: cover;
+  opacity: 60%
+}
+
+.icon7 {
+position: absolute;
+width: 4.12rem;
+height: 3.72rem;
+top: -0.86rem;
+left: 37.19rem;
+}
+
+.line {
+position: absolute;
+top: 9.63rem;
+left: 45.75rem;
+border-right: 4px solid rgba(246, 168, 1, 0.5);
+box-sizing: border-box;
+width: 0.25rem;
+height: 45.19rem;
+}
+
+.main-right {
+  position: absolute;
+  top: 7.75rem;
+  left: 47.75rem;
+  width: 44.48rem;
+  height: 51.07rem;
+}
+
+.choice1, .choice2, .choice3, .choice4, .choice5, .choice6, .choice7, .choice8 {
+  position: absolute;
+  width: 43.75rem;
+  height: 3.44rem;
+  top: 0;
+  left: 0;
+}
+
+.category {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.default {
+  position: absolute;
+  top: 1.56rem;
+  left: 0;
+}
+
+.select {
+  position: absolute;
+  top: 1.56rem;
+  left: 6.19rem;
+}
+
+.radio-input {
+  vertical-align: -0.5rem;
+  width: 1.88rem;
+  height: 1.88rem;
+  margin-right: 0.63rem;
+  accent-color: #014656;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+
+.radio-input[type="radio"]:disabled {
+  background-color: #D9D9D9;
+  cursor: auto;
+}
+
+.choice2 {
+  top: 5.13rem;
+}
+
+.select2, .select3, .select4, .select5, .select8 {
+  position: absolute;
+  top: 1.56rem;
+  left: 6.06rem;
+}
+
+.choice3 {
+  top: 10.25rem;
+}
+
+.select3-2, .select8-2 {
+  position: absolute;
+  top: 1.56rem;
+  left: 12.63rem;
+}
+
+.choice4 {
+  top: 15.38rem;
+}
+
+.select4-2 {
+  position: absolute;
+  top: 1.56rem;
+  left: 11.69rem;
+}
+
+.select4-3 {
+  position: absolute;
+  top: 1.56rem;
+  left: 20.31rem;
+}
+
+.select4-4 {
+  position: absolute;
+  top: 1.56rem;
+  left: 27.06rem;
+}
+
+.select4-5 {
+  position: absolute;
+  top: 1.56rem;
+  left: 34.75rem;
+}
+
+.choice5 {
+  top: 20.5rem;
+}
+
+.select5-2 {
+  position: absolute;
+  top: 1.56rem;
+  left: 12.81rem;
+}
+
+.select5-3 {
+  position: absolute;
+  top: 1.56rem;
+  left: 17.74rem;
+}
+
+.select5-4 {
+  position: absolute;
+  top: 1.56rem;
+  left: 23.44rem;
+}
+
+.choice6 {
+  top: 25.63rem;
+}
+
+.palette {
+  position: absolute;
+  width: 43.75rem;
+  height: 4.38rem;
+  top: 1.56rem;
+  left: 0;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+}
+
+.pencil, .pencil2 {
+  position: absolute;
+  width: 41.31rem;
+  height: 3.75rem;
+  top: 1.9rem;
+  left: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.radio-image-label {
+  display: inline-block;
+}
+
+.radio-image-label input[type="radio"] {
+  display: none;
+  cursor: pointer;
+}
+
+.radio-image-label input[type="radio"] + img {
+  width: 2.5rem;
+  height: 2.5rem;
+  top: 0.65rem;
+  cursor: pointer;
+}
+
+.radio-image-input input[type="radio"] {
+  display: none;
+}
+
+.radio-image-label input[type="radio"]:checked + img {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+.choice7 {
+  top: 33.25rem;
+}
+
+.choice8 {
+  top: 40.88rem;
+}
+
+.select8-3 {
+  position: absolute;
+  top: 1.56rem;
+  left: 19.19rem;
+}
+
+.select8-4 {
+  position: absolute;
+  top: 1.56rem;
+  left: 25.75rem;
+}
+
+.select8-5 {
+  position: absolute;
+  top: 1.56rem;
+  left: 31.38rem;
+}
+
+.generate {
+  position: absolute;
+  width: 14.92rem;
+  height: 4.63rem;
+  top: 46.5rem;
+  left: 29.81rem;
+  font-family: Inter;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.generate-box {
+  position: absolute;
+  width: 13.38rem;
+  height: 3.38rem;
+  top: 0.43rem;
+  left: 1.22rem;
+  background-color: #f6a801;
+}
+
+.generate-text {
+  position: absolute;
+  width: 10.5rem;
+  height: 1.81rem;
+  top: 1.3rem;
+  left: 2.67rem;
+  font-weight: 700;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFF;;
+}
+
+.generate-item {
+  position: absolute;
+  width: 15.11rem;
+  height: 4.82rem;
+  top: -0.09rem;
+  left: -0.09rem;
+}

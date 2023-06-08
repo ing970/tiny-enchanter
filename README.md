@@ -11,4 +11,4 @@
 <img src = "https://blog.kakaocdn.net/dn/9F50S/btshbfgGNPT/9JRiEYWoOo68jKWbzZfK2k/img.png" width = "500" height = "630"/>
 
 ### 📍 ERD
-<img src = "https://blog.kakaocdn.net/dn/66gTe/btshiiiP0ze/fua9KM7ABNobWFQ0rjas5K/img.png" width = "500" height = "500"/>
+<img src = "https://blog.kakaocdn.net/dn/ezncy1/btsja6OkoZU/8oxYYgBkxQj5t4ZBfl5VTK/img.png" width = "500" height = "500"/>

@@ -1,0 +1,225 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'GoryeongStrawberry';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/GoryeongStrawberry.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    line-height: normal;
+}
+
+.home {
+    position: relative;
+    background-color: #FFE593;
+    box-sizing: border-box;
+    width: 100%;
+    height: 61.38rem;
+    overflow: hidden;
+    text-align: left;
+    font-size: 1.5rem;
+    color: #FFF;
+    font-family: "Spoqa Han Sans Neo";
+}
+
+.header {
+    position: absolute;
+    width: 84.28rem;
+    height: 5.88rem;
+    top: 1.44rem;
+    left: 4rem;
+    font-size: 1.25rem;
+    color: #014656;
+}
+
+.logo {
+    position: absolute;
+    width: 5.88rem;
+    height: 5.88rem;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.btn-nini {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+  
+.nini {
+    position: absolute;
+    width: 6.56rem;
+    height: 4.06rem;
+    top: 0.88rem;
+    left: 7.5rem;
+    font-size: 3rem;
+    font-family: "GoryeongStrawberry";
+}
+  
+.btn-home {
+    position: absolute;
+    width: 3.69rem;
+    height: 1.56rem;
+    top: 2rem;
+    left: 70.13rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+  
+.btn-aboutus {
+    position: absolute;
+    width: 8.8rem;
+    height: 3.22rem;
+    top: 1.23rem;
+    left: 75.42rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: #F6A801;
+}
+  
+.aboutus {
+    position: absolute;
+    width: 8.99rem;
+    height: 3.35rem;
+    top: -0.06rem;
+    left: -0.06rem;
+}
+  
+.aboutus-text {
+    position: absolute;
+    width: 5.75rem;
+    height: 1.56rem;
+    top: 0.77rem;
+    left: 1.46rem;
+}
+  
+.main {
+    position: absolute;
+    width: 85.06rem;
+    height: 43.19rem;
+    top: 11.25rem;
+    left: 5rem;
+}
+  
+.stablediffusion {
+    position: absolute;
+    width: 17.69rem;
+    height: 10rem;
+    top: 6.25rem;
+    left: 0.47rem;
+    font-size: 4rem;
+    display: inline-block;
+    color: #014656;
+}
+  
+.stable {
+    margin: 0;
+  }
+  
+.icon1 {
+    position: absolute;
+    width: 19.59rem;
+    height: 2.55rem;
+    top: 17.5rem;
+    left: 0.62rem;
+}
+  
+.text {
+    position: absolute;
+    width: 34.38rem;
+    height: 12rem;
+    top: 21.15rem;
+    left: 0.47rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    color: #211919;
+    line-height: 2rem;
+}
+  
+.icon2 {
+    position: absolute;
+    width: 7.84rem;
+    height: 6.09rem;
+    top: 33.13rem;
+    left: 20rem;
+}
+  
+.getstarted {
+    position: absolute;
+    width: 14.92rem;
+    height: 4.63rem;
+    top: 37.49rem;
+    left: 0.13rem;
+    font-family: Inter;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+  
+.getstarted-box {
+    position: absolute;
+    width: 13.38rem;
+    height: 3.38rem;
+    top: 0.43rem;
+    left: 1.22rem;
+    background-color: #f6a801;
+}
+  
+.get-started {
+    position: absolute;
+    width: 10.5rem;
+    height: 1.81rem;
+    top: 1.3rem;
+    left: 2.67rem;
+    font-weight: 700;
+    display: inline-block;
+}
+  
+.getstarted-item {
+    position: absolute;
+    width: 15.11rem;
+    height: 4.82rem;
+    top: -0.09rem;
+    left: -0.09rem;
+}
+  
+.icon3 {
+    position: absolute;
+    width: 7.64rem;
+    height: 43.19rem;
+    left: 69.33rem;
+    object-fit: cover;
+}
+  
+.icon4 {
+    position: absolute;
+    width: 6.86rem;
+    height: 25.58rem;
+    top: 7.29rem;
+    left: 77.61rem;
+    object-fit: cover;
+}
+  
+.image {
+    position: absolute;
+    width: 36.94rem;
+    height: 36.94rem;
+    top: 2.94rem;
+    left: 41.13rem;
+    border-radius: 4%;
+}
+  
+.icon5 {
+    position: absolute;
+    width: 7.2rem;
+    height: 6.36rem;
+    top: 0.94rem;
+    left: 38.63rem;
+}
