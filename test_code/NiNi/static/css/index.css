@@ -7,42 +7,48 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
-    line-height: normal;
+    width: 100vw;
+    height: 100vh;
 }
 
 .home {
     position: relative;
     background-color: #FFE593;
-    box-sizing: border-box;
     width: 100%;
-    height: 61.38rem;
+    height: 100%;
     overflow: hidden;
-    text-align: left;
-    font-size: 1.5rem;
+    font-size: 1.59vw;
     color: #FFF;
     font-family: "Spoqa Han Sans Neo";
 }
 
 .header {
     position: absolute;
-    width: 84.28rem;
-    height: 5.88rem;
-    top: 1.44rem;
-    left: 4rem;
-    font-size: 1.25rem;
+    width: 89.19vw;
+    height: 9.57vh;
+    top: 2.34vh;
+    left: 4.23vw;
+    font-size: 1.32vw;
+    line-height: 2.54vh;
     color: #014656;
 }
 
 .logo {
     position: absolute;
-    width: 5.88rem;
-    height: 5.88rem;
+    width: 6.22vw;
+    height: 9.57vh;
     top: 0;
     left: 0;
-    border-radius: 50%;
-    object-fit: cover;
+    border-radius: 10px;
 }
 
 .btn-nini {
@@ -53,20 +59,21 @@ body {
   
 .nini {
     position: absolute;
-    width: 6.56rem;
-    height: 4.06rem;
-    top: 0.88rem;
-    left: 7.5rem;
-    font-size: 3rem;
+    width: 6.94vw;
+    height: 6.62vh;
+    top: 1.43vh;
+    left: 7.94vw;
+    font-size: 3.17vw;
     font-family: "GoryeongStrawberry";
+    line-height: 6.6vh;
 }
   
 .btn-home {
     position: absolute;
-    width: 3.69rem;
-    height: 1.56rem;
-    top: 2rem;
-    left: 70.13rem;
+    width: 3.9vw;
+    height: 2.55vh;
+    top: 3.26vh;
+    left: 74.2vw;
     text-decoration: none;
     cursor: pointer;
     color: inherit;
@@ -74,10 +81,10 @@ body {
   
 .btn-aboutus {
     position: absolute;
-    width: 8.8rem;
-    height: 3.22rem;
-    top: 1.23rem;
-    left: 75.42rem;
+    width: 9.38vw;
+    height: 5.25vh;
+    top: 2vh;
+    left: 79.81vw;
     text-decoration: none;
     cursor: pointer;
     color: #F6A801;
@@ -85,79 +92,78 @@ body {
   
 .aboutus {
     position: absolute;
-    width: 8.99rem;
-    height: 3.35rem;
-    top: -0.06rem;
-    left: -0.06rem;
+    width: 9.51vw;
+    height: 5.46vh;
+    top: -0.43vh;
+    left: -0.28vw;
 }
   
 .aboutus-text {
     position: absolute;
-    width: 5.75rem;
-    height: 1.56rem;
-    top: 0.77rem;
-    left: 1.46rem;
+    width: 6.08vw;
+    height: 2.55vw;
+    top: 1.26vh;
+    left: 1.54vw;
 }
   
 .main {
     position: absolute;
-    width: 85.06rem;
-    height: 43.19rem;
-    top: 11.25rem;
-    left: 5rem;
+    width: 90.01vw;
+    height: 70.37vh;
+    top: 18.33vh;
+    left: 5.29vw;
 }
   
 .stablediffusion {
     position: absolute;
-    width: 17.69rem;
-    height: 10rem;
-    top: 6.25rem;
-    left: 0.47rem;
-    font-size: 4rem;
+    width: 15.74vw;
+    height: 16.29vh;
+    top: 10.18vh;
+    left: 0.49vw;
+    font-size: 4.23vw;
     display: inline-block;
     color: #014656;
 }
   
 .stable {
     margin: 0;
-  }
+}
   
 .icon1 {
     position: absolute;
-    width: 19.59rem;
-    height: 2.55rem;
-    top: 17.5rem;
-    left: 0.62rem;
+    width: 20.73vw;
+    height: 3.54vh;
+    top: 28.51vh;
+    left: -0.85vw;
 }
   
 .text {
     position: absolute;
-    width: 34.38rem;
-    height: 12rem;
-    top: 21.15rem;
-    left: 0.47rem;
-    font-size: 1.5rem;
-    letter-spacing: 0.05em;
+    width: 36.38vw;
+    height: 19.56vh;
+    top: 34.62vh;
+    left: 0.49vw;
+    font-size: 1.59vw;
+    letter-spacing: 5%;
     display: inline-block;
     color: #211919;
-    line-height: 2rem;
+    line-height: 3.26vh;
 }
   
 .icon2 {
     position: absolute;
-    width: 7.84rem;
-    height: 6.09rem;
-    top: 33.13rem;
-    left: 20rem;
+    width: 5.12vw;
+    height: 9.91vh;
+    top: 53.97vh;
+    left: 21.16vw;
 }
   
 .getstarted {
     position: absolute;
-    width: 14.92rem;
-    height: 4.63rem;
-    top: 37.49rem;
-    left: 0.13rem;
-    font-family: Inter;
+    width: 15.79vw;
+    height: 7.55vh;
+    top: 61.07vh;
+    left: 0.13vw;
     text-decoration: none;
     cursor: pointer;
     color: inherit;
@@ -165,61 +171,60 @@ body {
   
 .getstarted-box {
     position: absolute;
-    width: 13.38rem;
-    height: 3.38rem;
-    top: 0.43rem;
-    left: 1.22rem;
+    width: 14.15vw;
+    height: 5.5vh;
+    top: 0.7vh;
+    left: 1.15vw;
     background-color: #f6a801;
 }
   
 .get-started {
     position: absolute;
-    width: 10.5rem;
-    height: 1.81rem;
-    top: 1.3rem;
-    left: 2.67rem;
+    width: 11.11vw;
+    height: 2.95vh;
+    top: 2.12vh;
+    left: 2.61vw;
     font-weight: 700;
     display: inline-block;
+    line-height: 3.06vh;
 }
   
 .getstarted-item {
     position: absolute;
-    width: 15.11rem;
-    height: 4.82rem;
-    top: -0.09rem;
-    left: -0.09rem;
+    width: 15.99vw;
+    height: 7.85vh;
+    top: -0.15vh;
+    left: -0.1vw;
 }
   
 .icon3 {
     position: absolute;
-    width: 7.64rem;
-    height: 43.19rem;
-    left: 69.33rem;
-    object-fit: cover;
+    width: 8.16vw;
+    height: 70.37vh;
+    left: 72.38vw;
 }
   
 .icon4 {
     position: absolute;
-    width: 6.86rem;
-    height: 25.58rem;
-    top: 7.29rem;
-    left: 77.61rem;
-    object-fit: cover;
+    width: 7.76vw;
+    height: 44.73vh;
+    top: 10.35vh;
+    left: 82.19vw;
 }
   
 .image {
     position: absolute;
-    width: 36.94rem;
-    height: 36.94rem;
-    top: 2.94rem;
-    left: 41.13rem;
+    width: 39.09vw;
+    height: 60.19vh;
+    top: 4.79vh;
+    left: 43.52vw;
     border-radius: 4%;
 }
   
 .icon5 {
     position: absolute;
-    width: 7.2rem;
-    height: 6.36rem;
-    top: 0.94rem;
-    left: 38.63rem;
+    width: 7.62vw;
+    height: 10.37vh;
+    top: 1.53vh;
+    left: 40.87vw;
 }
