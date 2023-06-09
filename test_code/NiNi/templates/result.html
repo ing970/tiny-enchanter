@@ -1,175 +1,178 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>NiNi</title>
-    <link rel="stylesheet" href="../static/css/result.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spoqa Han Sans Neo:wght@300;500;700&display=swap">
-  </head>
-  <body>
-    <div class="result">
-        <div class="header">
-            <img class="logo" alt="logo" src="../static/image/logo.svg">
-            <a class="btn-nini" href="/index" id="niNi">
-              <div class="nini">NiNi</div>
-            </a>
-            <a class="btn-home" href="/index" id="home">
-              <b>Home</b>
-            </a>
-            <a class="btn-aboutus" href="/aboutus" id="aboutUs">
-                <img class="aboutus" alt="about_us" src="../static/image/about-us.svg">
-                <b class="aboutus-text">About US</b>
-            </a>
-          </div>
-          <img class="icon8" alt="icon8" src="../static/image/icon8.svg">
-          <img class="icon9" alt="icon9" src="../static/image/icon9.svg">
-
-          <div class="download-box">
-            <button class="btn-download" onclick="downloadImage()">
-                <div class="download"></div>
-                <b class="download-text">Download</b>
-            </button>
-            <img class="imagebox" alt="imagebox" src="../static/image/imagebox.svg">
-            <div id="image-container">
-                <img id="image" class="load-image" alt="image">
-                <div id="loader" class="loader"></div>
+    <head>
+        <meta charset="utf-8">
+        <title>NiNi</title>
+        <link rel="stylesheet" href="../static/css/result.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap">
+    </head>
+    <body>
+        <div class="result">
+            <div class="header">
+                <img class="logo" alt="logo" src="../static/image/logo.svg">
+                <a class="btn-nini" href="/" id="niNi">
+                    <div class="nini">NiNi</div>
+                </a>
+                <a class="btn-home" href="/" id="home">
+                    <b>Home</b>
+                </a>
+                <a class="btn-aboutus" href="/aboutus" id="aboutUs">
+                    <img class="aboutus" alt="about_us" src="../static/image/about-us.svg">
+                    <b class="aboutus-text">About US</b>
+                </a>
             </div>
-          </div>
-          <div class="download-box2">
-            <button class="btn-download" onclick="downloadImage()">
-                <div class="download"></div>
-                <b class="download-text">Download</b>
-            </button>
-            <img class="imagebox2" alt="imagebox" src="../static/image/imagebox.svg">
-            <div id="image-container">
-              <img id="image2" class="load-image2" alt="image2">
-              <div id="loader2" class="loader2"></div>
-          </div>
+
+            <img class="icon8" alt="icon8" src="../static/image/icon8.svg">
+            <img class="icon9" alt="icon9" src="../static/image/icon9.svg">
+
+            <div class="download-box">
+                <button class="btn-download" onclick="downloadImage()">
+                    <div class="download"></div>
+                    <b class="download-text">Download</b>
+                </button>
+                <img class="imagebox" alt="imagebox" src="../static/image/imagebox.svg">
+                <div id="image-container">
+                    <img id="image" class="load-image" alt="image">
+                    <div id="loader" class="loader"></div>
+                </div>
+            </div>
+            <div class="download-box2">
+                <button class="btn-download" onclick="downloadImage()">
+                    <div class="download"></div>
+                    <b class="download-text">Download</b>
+                </button>
+                <img class="imagebox2" alt="imagebox" src="../static/image/imagebox.svg">
+                <div id="image-container">
+                    <img id="image2" class="load-image2" alt="image2">
+                    <div id="loader2" class="loader2"></div>
+                </div>
+            </div>
+            <div class="download-box3">
+                <button class="btn-download" onclick="downloadImage()">
+                    <div class="download"></div>
+                    <b class="download-text">Download</b>
+                </button>
+                <img class="imagebox3" alt="imagebox" src="../static/image/imagebox.svg">
+                <div id="image-container">
+                    <img id="image3" class="load-image3" alt="image3">
+                    <div id="loader3" class="loader3"></div>
+                </div>
+            </div>
+
+            <a class="btn-done" href="/choice" id="done">
+                <div class="done-box"></div>
+                <div class="done">Done</div>
+                <img class="done-item" alt="rectangle" src="../static/image/rectangle.svg">
+            </a>
         </div>
-        <div class="download-box3">
-            <button class="btn-download" onclick="downloadImage()">
-                <div class="download"></div>
-                <b class="download-text">Download</b>
-            </button>
-            <img class="imagebox3" alt="imagebox" src="../static/image/imagebox.svg">
-            <div id="image-container">
-              <img id="image3" class="load-image3" alt="image3">
-              <div id="loader3" class="loader3"></div>
-          </div>
-        </div>
-
-        <a class="btn-done" href="/choice" id="done">
-          <div class="done-box"></div>
-          <div class="done">Done</div>
-          <img class="done-item" alt="rectangle" src="../static/image/rectangle.svg">
-        </a>
-      </div>
-      <script>
-        var niNi = document.getElementById("niNi");
-        if (niNi) {
-            niNi.addEventListener("click", function (e) {
-                window.location.href = "/index";
-          });
-        }
-        
-        var home = document.getElementById("home");
-        if (home) {
-            home.addEventListener("click", function (e) {
-                window.location.href = "/index";
-          });
-        }
-        
-        var aboutUs = document.getElementById("aboutUs");
-        if (aboutUs) {
-            aboutUs.addEventListener("click", function (e) {
-                window.location.href = "/aboutus";
-          });
-        }
-
-        var image = document.getElementById("image");
-        var loader = document.getElementById("loader");
-
-        function loadImage() {
-          var xhr = new XMLHttpRequest();
-          xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
-              if (xhr.status === 200) {
-                image.onload = function() {
-                  loader.style.display = "none";
-                };
-                image.src = xhr.responseText;
-                loader.style.display = "block";
-              } else {
-                console.error("Error: " + xhr.status);
-              }
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+            var niNi = document.getElementById("niNi");
+            if (niNi) {
+                niNi.addEventListener("click", function (e) {
+                    window.location.href = "/";
+                });
             }
-          };
-
-          xhr.open("GET", "backend_url", true); // 백엔드 URL
-          xhr.send();
-        }
-
-        loadImage();
-
-        var image2 = document.getElementById("image2");
-        var loader2 = document.getElementById("loader2");
-
-        function loadImage2() {
-          var xhr2 = new XMLHttpRequest();
-          xhr2.onreadystatechange = function() {
-            if (xhr2.readyState === XMLHttpRequest.DONE) {
-              if (xhr2.status === 200) {
-                image2.onload = function() {
-                  loader2.style.display = "none";
-                };
-                image2.src = xhr2.responseText;
-                loader2.style.display = "block";
-              }
-              else {
-                console.error("Error: " + xhr2.status);
-              }
+            
+            var home = document.getElementById("home");
+            if (home) {
+                home.addEventListener("click", function (e) {
+                    window.location.href = "/";
+                });
             }
-          };
-
-          xhr2.open("GET", "backend_url", true); // 백엔드 URL
-          xhr2.send();
-        }
-
-        loadImage2();
-
-        var image3 = document.getElementById("image3");
-        var loader3 = document.getElementById("loader3");
-
-        function loadImage() {
-          var xhr3 = new XMLHttpRequest();
-          xhr3.onreadystatechange = function() {
-            if (xhr3.readyState === XMLHttpRequest.DONE) {
-              if (xhr3.status === 200) {
-                image3.onload = function() {
-                  loader3.style.display = "none";
-                };
-                image3.src = xhr3.responseText;
-                loader3.style.display = "block";
-              }
-              else {
-                console.error("Error: " + xhr3.status);
-              }
+            
+            var aboutUs = document.getElementById("aboutUs");
+            if (aboutUs) {
+                aboutUs.addEventListener("click", function (e) {
+                    window.location.href = "/aboutus";
+                });
             }
-          };
 
-          xhr3.open("GET", "backend_url", true); // 백엔드 URL
-          xhr3.send();
-        }
+            var doc = {{ doc | tojson }};
+            var checkpoints = {{ checkpoints | tojson }};
+            var lora_prompts = {{ lora_prompts | tojson }};
 
-        loadImage3();
+            window.onload=function run_model(){
+                var image = document.getElementById("image");
+                var loader = document.getElementById("loader");
+                var combined1 = {
+                    no1: 1,
+                    doc1: doc,
+                    cp1: checkpoints[0],
+                    lp1: lora_prompts[0]
+                };
+                axios({
+                    url: '/image_generate',
+                    method: 'post', 
+                    data: JSON.stringify(combined1),
+                    headers: {
+                        "Content-Type" : "application/json; charset=utf-8"
+                    },
+                }).then(function(response){
+                    
+                    image.src = "../static/image/result_1.png";
+                }).catch(function(error){ 
+                    console.log("");
+                    console.log("ERROR : " + JSON.stringify(error));
+                    console.log("");
+                });
+                    
+                var image2 = document.getElementById("image2");
+                var loader2 = document.getElementById("loader2");
+                var combined2 = {
+                    no2: 2,
+                    doc2: doc,
+                    cp2: checkpoints[1],
+                    lp2: lora_prompts[1]
+                };
+                axios({
+                    url: '/image_generate',
+                    method: 'post', 
+                    data: JSON.stringify(combined2),
+                    headers: {
+                        "Content-Type" : "application/json; charset=utf-8"
+                    },
+                }).then(function(response){
+                    image2.src = "../static/image/result_2.png";
+                }).catch(function(error){ 
+                    console.log("");
+                    console.log("ERROR : " + JSON.stringify(error));
+                    console.log("");
+                });
 
-        var back = document.getElementById("done");
-        if (back) {
-            back.addEventListener("click", function (e) {
-              window.location.href = "/choice";
-          });
-        }
-    </script>
-  </body>
+                var image3 = document.getElementById("image3");
+                var loader3 = document.getElementById("loader3");
+                var combined3 = {
+                    no3: 3,
+                    doc3: doc,
+                    cp3: checkpoints[2],
+                    lp3: lora_prompts[2]
+                };
+                axios({
+                    url: '/image_generate',
+                    method: 'post', 
+                    data: JSON.stringify(combined3),
+                    headers: {
+                        "Content-Type" : "application/json; charset=utf-8"
+                    },
+                }).then(function(response){
+                    loader.style.display = "none";
+                    loader2.style.display = "none";
+                    loader3.style.display = "none";
+                    image3.src = "../static/image/result_3.png";
+                }).catch(function(error){ 
+                    console.log("");
+                    console.log("ERROR : " + JSON.stringify(error));
+                    console.log("");
+                });
+            }
+
+            var back = document.getElementById("done");
+            if (back) {
+                back.addEventListener("click", function (e) {
+                    window.location.href = "/choice";
+                });
+            }
+        </script>
+    </body>
 </html>
