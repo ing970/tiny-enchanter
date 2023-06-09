@@ -183,13 +183,13 @@ body {
 
 .next {
     left: 29.9vw;
-    background-image: url("./public/next.svg");
+    background-image: url("../image/next.svg");
     opacity: 60%;
 }
   
 .prev {
     left: 1.32vw;
-    background-image: url("./public/next.svg");
+    background-image: url("../image/next.svg");
     opacity: 60%;
 }
 
