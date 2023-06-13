@@ -297,7 +297,7 @@ body {
 .tail-text {
     position: absolute;
     top: 0.6vh;
-    left: 2.5vw;
+    left: 2vw;
     margin: 0;
     font-size: 0.19vw;
     font-weight: 500;
@@ -317,7 +317,7 @@ body {
 .hair-text {
     position: absolute;
     top: 0.6vh;
-    left: 6.2vw;
+    left: 5.2vw;
     margin: 0;
     font-size: 0.19vw;
     font-weight: 500;

@@ -3,6 +3,8 @@ import io
 import base64
 import pymysql
 from PIL import Image, PngImagePlugin
+import boto3
+from datetime import datetime
 
 def draw_image(url, checkpoint, pos_prompt, neg_prompt, steps, cfg_scale, width=512, height=512, seed=-1, file_name="result", sampler_index="Euler a"):
     '''
@@ -28,10 +30,14 @@ def draw_image(url, checkpoint, pos_prompt, neg_prompt, steps, cfg_scale, width=
 
     # 이미지 파일(*.png), 로그(database) 저장
     for i in r['images']:
-        save_image(i, file_name, url)
-        with pymysql.connect(host='nini.ccggztrbdcst.us-east-2.rds.amazonaws.com', user='admin', password='nini2023', db='NINI', charset='utf8') as conn: #password 입력 필요
-            sql = "INSERT INTO result (Image) VALUES (%s)"
-            execute_query(conn, sql, (i,))
+        download_link = save_image(i, file_name, url)
+
+        if download_link.startswith("https"):
+            with pymysql.connect(host='nini.ccggztrbdcst.us-east-2.rds.amazonaws.com', user='admin', password='nini2023', db='NINI', charset='utf8') as conn: #password 입력 필요
+                sql = "INSERT INTO result (Image) VALUES (%s)"
+                execute_query(conn, sql, (i,))
+
+    return download_link
 
 def change_cp_model(url, checkpoint):
     '''
@@ -107,15 +113,54 @@ def execute_query(conn, sql, cdn_url=None):
         conn.commit()
         cursor.close()
 
+def s3_connection():
+    '''
+    s3버킷에 연결
+    '''
+    try:
+        s3 = boto3.client(
+            service_name="s3",
+            region_name="us-east-1",
+            aws_access_key_id="AKIAYTXK7W45DUTCEMVP",
+            aws_secret_access_key="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",
+        )
+    except:
+        return
+    else:
+        return s3
+
 def save_image(img, file_name, url):
     '''
     이미지 파일을 png로 저장
     '''
-    image = Image.open(io.BytesIO(base64.b64decode(img.split(",",1)[0])))
-    png_payload = {
-        "image": "data:image/png;base64," + img
-    }
-    response2 = requests.post(url=f'{url}/sdapi/v1/png-info', json=png_payload)
-    pnginfo = PngImagePlugin.PngInfo()
-    pnginfo.add_text("parameters", response2.json().get("info"))
-    image.save(f'static/image/{file_name}.png', pnginfo=pnginfo)
+    s3 = s3_connection()
+
+    if s3:
+        image = Image.open(io.BytesIO(base64.b64decode(img.split(",",1)[0])))
+        png_payload = {
+            "image": "data:image/png;base64," + img
+        }
+        response2 = requests.post(url=f'{url}/sdapi/v1/png-info', json=png_payload)
+        pnginfo = PngImagePlugin.PngInfo()
+        pnginfo.add_text("parameters", response2.json().get("info"))
+        image.save(f'static/image/{file_name}.png', pnginfo=pnginfo)
+
+        try:
+            s3.upload_file(f"static/image/{file_name}.png","nini-tiny-enchanter-bucket",f"{file_name}.png")
+        except:
+            return "S3 Image Upload Error"
+        else:
+            return f"https://nini-tiny-enchanter-bucket.s3.amazonaws.com/{file_name}.png"
+    else:
+        return "S3 Connection Error"
+    
+def generate_file_name(doc, imgno):
+    '''
+    이미지 파일 이름 반환
+    YYYYMMDDhhmmss-(체크박스 조합).png
+    '''
+    formatted_datetime = datetime.now().strftime("%Y%m%d%H%M%S")
+    checkbox_combination = "".join(list(doc.values()))
+    image_num = f"0{imgno}" if imgno < 10 else f"{imgno}"
+    
+    return f"{formatted_datetime}-{checkbox_combination}{image_num}"
