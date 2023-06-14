@@ -148,7 +148,7 @@
                     },
                 }).then(function(response){
                     fileLink = response.data.filelink;
-                    document.getElementById("image").src = "../static/image/result_1.png";
+                    document.getElementById("image").src = "../static/image/"+response.data.filename+".png";
                     document.getElementById("loading-text").innerText = "니니가 그림을 가져오고 있어요~!";
                     document.getElementById("dot2").style.backgroundColor = "#014656"
                     document.getElementById("dot3").style.backgroundColor = "#014656"
@@ -175,7 +175,7 @@
                     },
                 }).then(function(response2){
                     fileLink2 = response2.data.filelink;
-                    document.getElementById("image2").src = "../static/image/result_2.png";
+                    document.getElementById("image2").src = "../static/image/"+response2.data.filename+".png";
                     document.getElementById("loading-text").innerText = "니니가 곧 도착해요~!";
                     document.getElementById("dot4").style.backgroundColor = "#014656"
                     run_model_3();
@@ -200,7 +200,7 @@
                     },
                 }).then(function(response3){
                     fileLink3 = response3.data.filelink;
-                    document.getElementById("image3").src = "../static/image/result_3.png";
+                    document.getElementById("image3").src = "../static/image/"+response3.data.filename+".png";
                     imageGeneration = 1;
 
                     document.getElementById("loading").style.display='none';
