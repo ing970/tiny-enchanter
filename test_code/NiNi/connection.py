@@ -68,7 +68,6 @@ async def image_generate(request: Request):
     txts = list(json.loads(txts_b).values())
 
     url = "http://127.0.0.1:7860"
-    # url = "http://0.0.0.0:7860"
     img_no = txts[0]
     doc = txts[1]
     # checkpoint = txts[2]
@@ -91,5 +90,5 @@ async def home(request: Request):
     return templates.TemplateResponse("wrong.html", {"request": request})
 
 if __name__ == '__main__':
-    uvicorn.run("connection:app", reload=True)
+    uvicorn.run("connection:app", host="0.0.0.0", reload=True)
 # uvicorn connection:app --reload

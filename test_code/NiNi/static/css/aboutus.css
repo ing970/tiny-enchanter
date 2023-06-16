@@ -114,16 +114,59 @@ body {
     left: 5.29vw;
 }
 
-.about-us {
+.profile-img{
     position: absolute;
-    width: 49vw;
-    top: 44.73vh;
-    left: 20.13vw;
+    width: 59.52vw;
+    height: 45.82vh;
+    left: 15.25vw;
+}
+
+.profile {
+    position: absolute;
+    width: 59.52vw;
+    height: 45.82vh;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.profile-title {
+    position: absolute;
+    width: 60vw;
+    height: 16.6vh;
+    top: -1.56vh;
+    left: 15.25vw;
+    font-family: "GoryeongStrawberry";
     font-size: 4.23vw;
+    display: inline-block;
+    color: #000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.title-text {
+    position: absolute;
+    left: 12.89vw;
+}
+
+.profile-paragraph {
+    position: relative;
+    width: 60vw;
+    top: 50vh;
+    left: 15.25vw;
+    font-family: 'SpoqaHanSansNeo-Regular';
+    font-size: 2.11vw;
+    line-height: 100%;
     display: inline-block;
     color: #014656;
 }
-  
+
+.profile-paragraph-1-1, .profile-paragraph-3-2 {
+    font-family: 'GoryeongStrawberry';
+}
+
+.profile-paragraph-2-2, .profile-paragraph-2-4 {
+    font-weight: bold;
+    color: #F6A801;
+}
+
 .about-us-text {
     margin: 0;
   }
