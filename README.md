@@ -1,4 +1,4 @@
-# tiny-enchanter-sample
+# tiny-enchanter
 
 - 팀 명: nini
 - 서비스 이름: 꼬마 마법사 (tiny-enchanter)
