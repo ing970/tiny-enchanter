@@ -1,0 +1,485 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'GoryeongStrawberry';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/GoryeongStrawberry.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.choice {
+    position: relative;
+    background-color: #FFE593;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 0.92vw;
+    text-align: center;
+    color: #211919;
+    font-family: "Spoqa Han Sans Neo";
+}
+
+.header {
+    position: absolute;
+    width: 89.19vw;
+    height: 9.57vh;
+    top: 2.34vh;
+    left: 4.23vw;
+    font-size: 1.32vw;
+    line-height: 2.54vh;
+    color: #014656;
+}
+
+.logo {
+    position: absolute;
+    width: 6.22vw;
+    height: 9.57vh;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+.btn-nini {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.nini {
+    position: absolute;
+    width: 6.94vw;
+    height: 6.62vh;
+    top: 1.43vh;
+    left: 7.94vw;
+    font-size: 3.17vw;
+    font-family: "GoryeongStrawberry";
+    line-height: 6.6vh;
+}
+
+.btn-home {
+    position: absolute;
+    width: 3.9vw;
+    height: 2.55vh;
+    top: 3.26vh;
+    left: 74.2vw;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.btn-aboutus {
+    position: absolute;
+    width: 9.38vw;
+    height: 5.25vh;
+    top: 2vh;
+    left: 79.81vw;
+    text-decoration: none;
+    cursor: pointer;
+    color: #F6A801;
+}
+  
+.aboutus {
+    position: absolute;
+    width: 9.51vw;
+    height: 5.46vh;
+    top: -0.43vh;
+    left: -0.28vw;
+}
+  
+.aboutus-text {
+    position: absolute;
+    width: 6.08vw;
+    height: 2.55vw;
+    top: 1.26vh;
+    left: 1.54vw;
+}
+
+.main-left {
+    position: absolute;
+    width: 46.56vw;
+    height: 74.03vh;
+    top: 15.88vh;
+    left: 1.98vw;
+}
+
+.ex-text {
+    position: absolute;
+    margin: 0;
+    top: 0.71vh;
+    left: 11.04vw;
+    font-size: 1.59vw;
+    font-family: "GoryeongStrawberry";
+    line-height: 3.3vh;
+}
+
+.icon6 {
+    position: absolute;
+    width: 7.76vw;
+    height: 44.73vh;
+    top: 4.89vh;
+    left: -0.99vw;
+}
+
+.icon7 {
+    position: absolute;
+    width: 42vw;
+    height: 29.23vh;
+    top: 46.33vh;
+    left: 5.56vw;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 37.03vw;
+    height: 62.97vh;
+    top: 7.03vh;
+    left: 4.3vw;
+}
+
+.slide {
+    position: absolute;
+    width: 37.03vw;
+    height: 57.02vh;
+    display: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+}
+
+.slideshow-dots {
+    position: absolute;
+    top: 62.15vh;
+    left: 18.74vw;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dot {
+    width: 0.53vw;
+    height: 0.81vh;
+    margin: 0 0.2vw;
+    background-color: #FFF;
+    border-radius: 33px;
+    transition: transform 0.3s, background-image 0.3s;
+}
+
+.dot.active {
+    background-color: #014656;
+    width: 1.59vw;
+    height: 0.81vh;
+    border-radius: 33px;
+}
+
+.slideshow-button {
+    position: absolute;
+    width: 2.65vw;
+    height: 4.07vh;
+    top: 26.48vh;
+    transform: translateY(-50%);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.prev {
+    left: 1.32vw;
+    background-image: url("../image/prev.svg");
+}
+
+.next {
+    left: 33.07vw;
+    background-image: url("../image/next.svg");
+}
+  
+.icon8 {
+  position: absolute;
+  width: 4.36vw;
+  height: 6.07vh;
+  top: 5.7vh;
+  left: 37.37vw;
+}
+
+.line {
+  position: absolute;
+  height: 73.21vh;
+  top: 15.89vh;
+  left: 48.54vw;
+  border-right: 0.26vw solid rgba(246, 168, 1, 0.5);
+  box-sizing: border-box;
+}
+
+.main-right {
+    position: absolute;
+    width: 47.07vw;
+    height: 83.21vh;
+    top: 16.5vh;
+    left: 50.52vw;
+}
+
+.choice1, .choice2, .choice3, .choice4, .choice5, .choice6, .choice7, .choice8 {
+    position: absolute;
+    width: 47.07vw;
+    height: 5.6vh;
+    top: 0;
+    left: 0;
+}
+
+.category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1.1vw;
+    font-weight: 500;
+    line-height: 2.04vw;
+}
+
+.default {
+    position: absolute;
+    top: 2.55vh;
+    left: 0;
+}
+
+.select {
+    position: absolute;
+    top: 2.55vh;
+    left: 6.54vw;
+}
+
+.radio-input {
+    vertical-align: -0.52vw;
+    width: 1.98vw;
+    height: 3.05vh;
+    margin-right: 0.366vw;
+    accent-color: #014656;
+    cursor: pointer;
+    font-weight: 300;
+    line-height: 2.04vh;
+}
+
+.radio-input[type="radio"]:disabled {
+    background-color: #D9D9D9;
+    cursor: auto;
+}
+
+.choice2 {
+    top: 8.35vh;
+}
+
+.select2, .select3, .select4, .select5, .select8 {
+    position: absolute;
+    top: 2.55vh;
+    left: 6.54vw;
+}
+
+.choice3 {
+    top: 16.7vh;
+}
+
+.tail-text {
+    position: absolute;
+    top: 0.6vh;
+    left: 2vw;
+    margin: 0;
+    font-size: 0.19vw;
+    font-weight: 500;
+    color: #FF0000;
+}
+
+.select3-2, .select8-2 {
+    position: absolute;
+    top: 2.55vh;
+    left: 13.36vw;
+}
+
+.choice4 {
+    top: 25.05vh;
+}
+
+.hair-text {
+    position: absolute;
+    top: 0.6vh;
+    left: 5.2vw;
+    margin: 0;
+    font-size: 0.19vw;
+    font-weight: 500;
+    color: #FF0000;
+}
+
+.select4-2 {
+    position: absolute;
+    top: 2.55vh;
+    left: 12.37vw;
+}
+
+.select4-3 {
+    position: absolute;
+    top: 2.55vh;
+    left: 21.49vw;
+}
+
+.select4-4 {
+    position: absolute;
+    top: 2.55vh;
+    left: 28.64vw;
+}
+
+.select4-5 {
+    position: absolute;
+    top: 2.55vh;
+    left: 36.77vw;
+}
+
+.choice5 {
+    top: 33.4vh;
+}
+
+.select5-2 {
+    position: absolute;
+    top: 2.55vh;
+    left: 13.56vw;
+}
+
+.select5-3 {
+    position: absolute;
+    top: 2.55vh;
+    left: 18.78vw;
+}
+
+.choice6 {
+    top: 41.75vh;
+}
+
+.palette {
+    position: absolute;
+    width: 46.3vw;
+    height: 7.13vh;
+    top: 2.55vh;
+    left: 0;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.pencil, .pencil2 {
+    position: absolute;
+    width: 43.72vw;
+    height: 6.11vh;
+    top: 3.05vh;
+    left: 1.32vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.radio-image-label {
+    display: inline-block;
+}
+
+.radio-image-label input[type="radio"] {
+    display: none;
+    cursor: pointer;
+}
+
+.radio-image-label input[type="radio"] + img {
+    width: 1.98vw;
+    height: 3.05vh;
+    top: 1.02vh;
+    cursor: pointer;
+}
+
+.radio-image-input input[type="radio"] {
+    display: none;
+}
+
+.radio-image-label input[type="radio"]:checked + img {
+    width: 3.31vw;
+    height: 5.1vh;
+}
+
+.choice7 {
+    top: 54.18vh;
+}
+
+.choice8 {
+    top: 66.6vh;
+}
+
+.select8-3 {
+    position: absolute;
+    top: 2.55vh;
+    left: 20.3vw;
+}
+
+.select8-4 {
+    position: absolute;
+    top: 2.55vh;
+    left: 27.25vw;
+}
+
+.select8-5 {
+    position: absolute;
+    top: 2.55vh;
+    left: 33.2vw;
+}
+
+.generate {
+    position: absolute;
+    width: 15.79vw;
+    height: 7.55vh;
+    top: 75.28vh;
+    left: 32.8vw;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+  
+.generate-box {
+    position: absolute;
+    width: 14.15vw;
+    height: 5.51vh;
+    top: 0.7vh;
+    left: 1.29vw;
+    background-color: #f6a801;
+}
+  
+.generate-text {
+    position: absolute;
+    width: 11.11vw;
+    height: 2.95vh;
+    top: 2.12vh;
+    left: 2.83vw;
+    display: inline-block;
+    font-size: 1.58vw;
+    font-weight: 700;
+    color: #FFF;
+}
+  
+.generate-item {
+    position: absolute;
+    width: 15.99vw;
+    height: 7.85vh;
+    top: -0.1vh;
+    left: -0.15vw;
+}

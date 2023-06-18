@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>NiNi</title>
+        <link rel="stylesheet" href="../static/css/wrong.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spoqa Han Sans Neo:wght@300;500;700&display=swap">
+        <link rel="shortcut icon" href="">
+    </head>
+    <body>
+        <div class="home">
+            <div class="header">
+                <img class="logo" alt="logo" src="../static/image/logo.svg">
+                <a class="btn-nini" id="niNi">
+                    <div class="nini">NiNi</div>
+                </a>
+                <a class="btn-home" id="home">
+                    <b>Home</b>
+                </a>
+                <a class="btn-aboutus" id="aboutUs">
+                    <img class="aboutus" alt="about_us" src="../static/image/about-us.svg">
+                    <b class="aboutus-text">About US</b>
+                </a>
+            </div>
+
+            <div class="main">
+                <div>
+                    <img class="cry-nini" alt="error" src="../static/image/cry_nini.png"
+                </div>
+                <b class="wrong">
+                    <p class="wrong-text">Something went wrong.</p>
+                </b>
+            </div>
+        </div>
+        <script>
+            var niNi = document.getElementById("niNi");
+            if (niNi) {
+                niNi.addEventListener("click", function (e) {
+                    window.location.href = "/";
+              });
+            }
+            
+            var home = document.getElementById("home");
+            if (home) {
+                home.addEventListener("click", function (e) {
+                    window.location.href = "/";
+              });
+            }
+            
+            var aboutUs = document.getElementById("aboutUs");
+            if (aboutUs) {
+                aboutUs.addEventListener("click", function (e) {
+                    window.location.href = "/aboutus";
+              });
+            }
+        </script>
+    </body>
+</html>

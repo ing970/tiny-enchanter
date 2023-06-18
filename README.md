@@ -1,4 +1,4 @@
-# tiny-enchanter-sample
+# tiny-enchanter
 
 - 팀 명: nini
 - 서비스 이름: 꼬마 마법사 (tiny-enchanter)
@@ -8,7 +8,7 @@
 - Stable diffusion 모델을 이용한 서비스 입니다.
 
 ### 📍 로고이미지 예시
-<img src = "https://blog.kakaocdn.net/dn/9F50S/btshbfgGNPT/9JRiEYWoOo68jKWbzZfK2k/img.png" width = "500" height = "630"/>
+<img src = "https://blog.kakaocdn.net/dn/bDFUXC/btsjnH1BZME/VQ1VvfNq6BxXIKFrlWzj90/img.png" width = "250" height = "250"/>
 
 ### 📍 ERD
-<img src = "https://blog.kakaocdn.net/dn/66gTe/btshiiiP0ze/fua9KM7ABNobWFQ0rjas5K/img.png" width = "500" height = "500"/>
+<img src = "https://blog.kakaocdn.net/dn/mdxyK/btskhLiw60e/p9lQItiQiA7omRHyz4jXi0/img.png" width = "500" height = "500"/>

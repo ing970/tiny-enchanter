@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'GoryeongStrawberry';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/GoryeongStrawberry.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.home {
+    position: relative;
+    background-color: #FFE593;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 1.59vw;
+    color: #FFF;
+    font-family: "Spoqa Han Sans Neo";
+}
+
+.header {
+    position: absolute;
+    width: 89.19vw;
+    height: 9.57vh;
+    top: 2.34vh;
+    left: 4.23vw;
+    font-size: 1.32vw;
+    line-height: 2.54vh;
+    color: #014656;
+}
+
+.logo {
+    position: absolute;
+    width: 6.22vw;
+    height: 9.57vh;
+    top: -0.5vh;
+    left: 2vw;
+    border-radius: 10px;
+}
+
+.btn-nini {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+  
+.nini {
+    position: absolute;
+    width: 6.94vw;
+    height: 6.62vh;
+    top: 1.43vh;
+    left: 7.94vw;
+    font-size: 3.17vw;
+    font-family: "GoryeongStrawberry";
+    line-height: 6.6vh;
+}
+  
+.btn-home {
+    position: absolute;
+    width: 3.9vw;
+    height: 2.55vh;
+    top: 3.26vh;
+    left: 74.2vw;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+  
+.btn-aboutus {
+    position: absolute;
+    width: 9.38vw;
+    height: 5.25vh;
+    top: 2vh;
+    left: 79.81vw;
+    text-decoration: none;
+    cursor: pointer;
+    color: #F6A801;
+}
+  
+.aboutus {
+    position: absolute;
+    width: 9.51vw;
+    height: 5.46vh;
+    top: -0.43vh;
+    left: -0.28vw;
+}
+  
+.aboutus-text {
+    position: absolute;
+    width: 6.08vw;
+    height: 2.55vw;
+    top: 1.26vh;
+    left: 1.54vw;
+}
+  
+.main {
+    position: absolute;
+    width: 90.01vw;
+    height: 70.37vh;
+    top: 18.33vh;
+    left: 5.29vw;
+}
+
+.profile-img{
+    position: absolute;
+    width: 59.52vw;
+    height: 45.82vh;
+    left: 15.25vw;
+}
+
+.profile {
+    position: absolute;
+    width: 59.52vw;
+    height: 45.82vh;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.profile-title {
+    position: absolute;
+    width: 60vw;
+    height: 16.6vh;
+    top: -1.56vh;
+    left: 15.25vw;
+    font-family: "GoryeongStrawberry";
+    font-size: 4.23vw;
+    display: inline-block;
+    color: #000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.title-text {
+    position: absolute;
+    left: 12.89vw;
+}
+
+.profile-paragraph {
+    position: relative;
+    width: 60vw;
+    top: 50vh;
+    left: 15.25vw;
+    font-family: 'SpoqaHanSansNeo-Regular';
+    font-size: 2.11vw;
+    line-height: 100%;
+    display: inline-block;
+    color: #014656;
+}
+
+.profile-paragraph-1-1, .profile-paragraph-3-2 {
+    font-family: 'GoryeongStrawberry';
+}
+
+.profile-paragraph-2-2, .profile-paragraph-2-4 {
+    font-weight: bold;
+    color: #F6A801;
+}
+
+.about-us-text {
+    margin: 0;
+  }

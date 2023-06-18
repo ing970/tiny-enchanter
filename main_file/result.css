@@ -1,0 +1,268 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'GoryeongStrawberry';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/GoryeongStrawberry.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.result {
+    position: relative;
+    background-color: #FFE593;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 1.59vh;
+    color: #FFF;
+    font-family: "Spoqa Han Sans Neo";
+    text-align: center;
+}
+
+.header {
+    position: absolute;
+    width: 89.19vw;
+    height: 9.57vh;
+    top: 2.34vh;
+    left: 4.23vw;
+    font-size: 1.32vw;
+    line-height: 2.54vh;
+    color: #014656;
+}
+
+.logo {
+    position: absolute;
+    width: 6.22vw;
+    height: 9.57vh;
+    top: 0;
+    left: 0;
+    border-radius: 100px;
+}
+
+.btn-nini {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+  
+.nini {
+    position: absolute;
+    width: 6.94vw;
+    height: 6.62vh;
+    top: 1.43vh;
+    left: 7.94vw;
+    font-size: 3.17vw;
+    font-family: "GoryeongStrawberry";
+    line-height: 6.6vh;
+}
+  
+.btn-home {
+    position: absolute;
+    width: 3.9vw;
+    height: 2.55vh;
+    top: 3.26vh;
+    left: 74.2vw;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+  
+.btn-aboutus {
+    position: absolute;
+    width: 9.38vw;
+    height: 5.25vh;
+    top: 2vh;
+    left: 79.81vw;
+    text-decoration: none;
+    cursor: pointer;
+    color: #F6A801;
+}
+  
+.aboutus {
+    position: absolute;
+    width: 9.51vw;
+    height: 5.46vh;
+    top: -0.43vh;
+    left: -0.28vw;
+}
+  
+.aboutus-text {
+    position: absolute;
+    width: 6.08vw;
+    height: 2.55vw;
+    top: 1.26vh;
+    left: 1.54vw;
+}
+
+.icon9 {
+    position: absolute;
+    width: 11.61vw;
+    height: 47.8vh;
+    top: 22.03vh;
+    left: -2.25vw;
+}
+
+.icon10 {
+    position: absolute;
+    width: 59.79vw;
+    height: 16.5vh;
+    top: 85.34vh;
+    left: -0.79vw;
+}
+
+.download-box, .download-box2, .download-box3 {
+    position: absolute;
+    width: 29.37vw;
+    height: 33.93vh;
+    top: 24.34vh;
+    left: 4.3vw;
+    border-radius: 40px;
+}
+
+.btn-download {
+    cursor: pointer;
+}
+
+.download-box2 {
+    left: 35.32vw;
+}
+
+.download-box3 {
+    left: 66.34vw;
+}
+
+.download, .download2, .download3 {
+    position: absolute;
+    width: 14.15vw;
+    height: 5.5vh;
+    top: 46.74vh;
+    left: 7.62vw;
+    background-color: #F6A801;
+    border-radius: 40px;
+}
+
+.download-text, .download-text2, .download-text3 {
+    position: absolute;
+    top: 47.96vh;
+    left: 10.92vw;
+    font-family: "GoryeongStrawberry";
+    font-size:1.59vw;
+    color: #FFF;
+}
+
+.imagebox, .imagebox2, .imagebox3 {
+    position: absolute;
+    width: 29.1vw;
+    height: 44.8vh;
+    top: 0;
+    left: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+}
+
+#image-container {
+    position: relative;
+    top : 2.5vh;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.load-image, .load-image2, .load-image3 {
+    width: 23.50vw;
+    height: 36.17vh;
+}
+
+.loading {
+    position: absolute;
+    width: 100vw;
+    height: 61vh;
+    top: 18.43vh;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.loading-nini {
+    position: absolute;
+    width: 21.89vw;
+    height: 33.71vh;
+    top: 12.63vh;
+    left: 7.41vw;
+}
+
+.loading-text {
+    position: absolute;
+    top: 19.45vh;
+    left: 38.23vw;
+    font-size: 4.23vw;
+    font-family: "GoryeongStrawberry";
+    line-height: 8.25vh;
+    color: #000;
+}
+
+.loading-dots {
+    position: absolute;
+    top: 48.68vh;
+    left: 42.93vw;
+    display: flex;
+}
+
+.dot {
+    width: 1.46vw;
+    height: 2.24vh;
+    margin: 0 1.2vw;
+    background-color: #D9D9D9;
+    border-radius: 50px;
+}
+
+
+.btn-done {
+    position: absolute;
+    width: 15.79vw;
+    height: 7.55vh;
+    top: 87.07vh;
+    left: 79.37vw;
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+  
+.done-box {
+    position: absolute;
+    width: 14.15vw;
+    height: 5.51vh;
+    top: 0.7vh;
+    left: 1.29vw;
+    background-color: #f6a801;
+}
+  
+.done {
+    position: absolute;
+    width: 11.11vw;
+    height: 2.95vh;
+    top: 2.12vh;
+    left: 2.83vw;
+    font-weight: 700;
+    font-size: 1.59vw;
+    display: inline-block;
+}
+  
+.done-item {
+    position: absolute;
+    width: 15.99vw;
+    height: 7.85vh;
+    top: -0.1vh;
+    left: -0.15vw;
+}

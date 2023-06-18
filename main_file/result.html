@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>NiNi</title>
+        <link rel="stylesheet" href="../static/css/result.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500;800&display=swap">
+    </head>
+    <body>
+        <div class="result">
+            <div class="header">
+                <img class="logo" alt="logo" src="../static/image/nini.svg">
+                <a class="btn-nini" id="niNi">
+                    <div class="nini">NiNi</div>
+                </a>
+                <a class="btn-home" id="home">
+                    <b>Home</b>
+                </a>
+                <a class="btn-aboutus" id="aboutUs">
+                    <img class="aboutus" alt="about_us" src="../static/image/about-us.svg">
+                    <b class="aboutus-text">About US</b>
+                </a>
+            </div>
+
+            <img class="icon9" alt="icon9" src="../static/image/icon9.svg">
+            <img class="icon10" alt="icon10" src="../static/image/icon10.svg">
+
+            <div class="download-box">
+                <button class="btn-download" onclick="downloadImage()">
+                    <div class="download"></div>
+                    <b class="download-text">Download</b>
+                </button>
+                <div class="imagebox"></div>
+                <div id="image-container">
+                    <img id="image" class="load-image" alt="image" style="visibility: hidden;">
+                </div>
+            </div>
+            <div class="download-box2">
+                <button class="btn-download" onclick="downloadImage()">
+                    <div class="download"></div>
+                    <b class="download-text">Download</b>
+                </button>
+                <div class="imagebox2"></div>
+                <div id="image-container">
+                    <img id="image2" class="load-image2" alt="image2" style="visibility: hidden;">
+                </div>
+            </div>
+            <div class="download-box3">
+                <button class="btn-download" onclick="downloadImage()">
+                    <div class="download"></div>
+                    <b class="download-text">Download</b>
+                </button>
+                <div class="imagebox3"></div>
+                <div id="image-container">
+                    <img id="image3" class="load-image3" alt="image3" style="visibility: hidden;">
+                </div>
+            </div>
+
+            <div class="loading">
+                <img class="loading-nini" src="../static/image/nini.svg">
+                <p class="loading-text">니니가 그림을 그리고 있어요~!</p>
+                <div class="loading-dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <a class="btn-done" id="done" style="visibility: hidden;">
+                <div class="done-box"></div>
+                <div class="done">Done</div>
+                <img class="done-item" alt="rectangle" src="../static/image/rectangle.svg">
+            </a>
+        </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>         
+            var niNi = document.getElementById("niNi");
+            if (niNi) {
+                niNi.addEventListener("click", function (e) {
+                    window.location.href = "/";
+                });
+            }
+            
+            var home = document.getElementById("home");
+            if (home) {
+                home.addEventListener("click", function (e) {
+                    window.location.href = "/";
+                });
+            }
+            
+            var aboutUs = document.getElementById("aboutUs");
+            if (aboutUs) {
+                aboutUs.addEventListener("click", function (e) {
+                    window.location.href = "/aboutus";
+                });
+            }
+
+            /* post request 보내서 이미지 받아오기 */
+            var doc = {{ doc | tojson }};
+            var checkpoints = {{ checkpoints | tojson }};
+            var lora_prompts = {{ lora_prompts | tojson }};
+
+            var image = document.getElementById("image");
+            var image2 = document.getElementById("image2");
+            var image3 = document.getElementById("image3");
+
+            var loader = document.getElementById("loader");
+            var loader2 = document.getElementById("loader2");
+            var loader3 = document.getElementById("loader3");
+
+            var loaderText = document.getElementById("loader-text");
+            var loaderText2 = document.getElementById("loader-text2");
+            var loaderText3 = document.getElementById("loader-text3");
+
+            window.onload=function run_model(){
+                var imageGeneration = 0;
+                var combined1 = {
+                    no1: 1,
+                    doc1: doc,
+                    cp1: checkpoints[0],
+                    lp1: lora_prompts[0]
+                };
+                axios({
+                    url: '/image_generate',
+                    method: 'post', 
+                    data: JSON.stringify(combined1),
+                    headers: {
+                        "Content-Type" : "application/json; charset=utf-8"
+                    },
+                }).then(function(response){
+                    image.src = "../static/image/result_1.png";
+                    loaderText.innerText = JSON.stringify(response);
+                    loaderText2.innerText = "1/3";
+                    loaderText3.innerText = "1/3";
+                }).catch(function(error){ 
+                    window.location.href = '/wrong';
+                });
+                    
+                var combined2 = {
+                    no2: 2,
+                    doc2: doc,
+                    cp2: checkpoints[1],
+                    lp2: lora_prompts[1]
+                };
+                axios({
+                    url: '/image_generate',
+                    method: 'post', 
+                    data: JSON.stringify(combined2),
+                    headers: {
+                        "Content-Type" : "application/json; charset=utf-8"
+                    },
+                }).then(function(response){
+                    image2.src = "../static/image/result_2.png";
+                    loaderText.innerText = "2/3";
+                    loaderText2.innerText = "2/3";
+                    loaderText3.innerText = "2/3";
+                }).catch(function(error){ 
+                    window.location.href = '/wrong';
+                });
+
+                var combined3 = {
+                    no3: 3,
+                    doc3: doc,
+                    cp3: checkpoints[2],
+                    lp3: lora_prompts[2]
+                };
+                axios({
+                    url: '/image_generate',
+                    method: 'post', 
+                    data: JSON.stringify(combined3),
+                    headers: {
+                        "Content-Type" : "application/json; charset=utf-8"
+                    },
+                }).then(function(response){
+                    image3.src = "../static/image/result_3.png";
+                    imageGeneration = 1;
+
+                    loader.style.display = "none";
+                    loader2.style.display = "none";
+                    loader3.style.display = "none";
+
+                    loaderText.style.display = "none";
+                    loaderText2.style.display = "none";
+                    loaderText3.style.display = "none";
+
+                    image.style.visibility='visible';
+                    image2.style.visibility='visible';
+                    image3.style.visibility='visible';
+                }).catch(function(error){ 
+                    window.location.href = '/wrong';
+                });
+            }
+
+            var done = document.getElementById("done");
+            if (done) {
+                back.addEventListener("click", function (e) {
+                    window.location.href = "/choice";
+                });
+            }
+        </script>
+    </body>
+</html>
