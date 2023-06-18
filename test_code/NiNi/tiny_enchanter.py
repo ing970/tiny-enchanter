@@ -3,8 +3,8 @@ import io
 import base64
 import pymysql
 from PIL import Image, PngImagePlugin
-
-db_pw = '' #password 입력 필요
+import boto3
+from datetime import datetime
 
 def draw_image(url, checkpoint, pos_prompt, neg_prompt, steps, cfg_scale, width=512, height=512, seed=-1, file_name="result", sampler_index="Euler a"):
     '''
@@ -24,20 +24,20 @@ def draw_image(url, checkpoint, pos_prompt, neg_prompt, steps, cfg_scale, width=
         "negative_prompt": neg_prompt,
         "sampler_index": sampler_index
     }
+
     response = requests.post(url=f'{url}/sdapi/v1/txt2img', json=payload)
     r = response.json()
 
     # 이미지 파일(*.png), 로그(database) 저장
-    images = []
     for i in r['images']:
-        save_image(i, file_name)
-        images.append(i)
+        download_link = save_image(i, file_name, url)
 
-        with pymysql.connect(host='localhost', user='root', password=db_pw, db='NINI', charset='utf8') as conn: #password 입력 필요
-            sql = "INSERT INTO result (Image) VALUES (%s)"
-            execute_query(conn, sql, (i,))
-            
-    return images
+        if download_link.startswith("https"):
+            with pymysql.connect(host='nini.ccggztrbdcst.us-east-2.rds.amazonaws.com', user='admin', password='nini2023', db='NINI', charset='utf8') as conn: #password 입력 필요
+                sql = "INSERT INTO result (Image) VALUES (%s)"
+                execute_query(conn, sql, download_link)
+
+    return download_link
 
 def change_cp_model(url, checkpoint):
     '''
@@ -48,11 +48,26 @@ def change_cp_model(url, checkpoint):
     }
     response = requests.post(url=f'{url}/sdapi/v1/options', json=option_payload)
 
+def get_checkpoints():
+    '''
+    디비에 저장된 체크포인트 모델 목록 및 LoRA 프롬프트 데이터 반환
+    '''
+    checkpoints = {}
+
+    with pymysql.connect(host='nini.ccggztrbdcst.us-east-2.rds.amazonaws.com', user='admin', password='nini2023', db='NINI', charset='utf8') as conn:
+        sql = f"SELECT checkpoint_model.Cp_model_name, checkpoint_model.Lora_prompt FROM checkpoint_model"
+        query_result = execute_query(conn, sql)
+        if query_result:
+            if query_result[0][0]:
+                for qr in query_result:
+                    checkpoints[qr[0]] = qr[1]
+
+    return checkpoints
+
 def get_data(doc):
     '''
-    디비에 저장된 데이터 반환
+    디비에 저장된 프롬프트 데이터 반환
     '''
-    checkpoints = []
     pos_prompt = ""
     neg_prompt = ""
     steps = 40
@@ -61,14 +76,7 @@ def get_data(doc):
     if doc['01'] == '02' and doc['08'] == '01':
         doc['08'] = '99'
 
-    with pymysql.connect(host='localhost', user='root', password=db_pw, db='NINI', charset='utf8') as conn: #password 입력 필요
-        sql = f"SELECT checkpoint_model.Cp_model_name FROM checkpoint_model"
-        query_result = execute_query(conn, sql)
-        if query_result:
-            if query_result[0][0]:
-                for qr in query_result:
-                    checkpoints.append(qr[0])
-
+    with pymysql.connect(host='nini.ccggztrbdcst.us-east-2.rds.amazonaws.com', user='admin', password='nini2023', db='NINI', charset='utf8') as conn:
         for key, value in doc.items():
             check_txt = key + value
 
@@ -84,7 +92,7 @@ def get_data(doc):
                 if query_result[0][0]:
                     neg_prompt += ", " + query_result[0][0]
 
-    return checkpoints, pos_prompt.lstrip(", "), neg_prompt.lstrip(", "), steps, cfg_scale
+    return pos_prompt.lstrip(", "), neg_prompt.lstrip(", "), steps, cfg_scale
 
 def execute_query(conn, sql, cdn_url=None):
     '''
@@ -105,34 +113,54 @@ def execute_query(conn, sql, cdn_url=None):
         conn.commit()
         cursor.close()
 
-def save_image(img, file_name):
+def s3_connection():
+    '''
+    s3버킷에 연결
+    '''
+    try:
+        s3 = boto3.client(
+            service_name="s3",
+            region_name="us-east-1",
+            aws_access_key_id="AKIAYTXK7W45DUTCEMVP",
+            aws_secret_access_key="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",
+        )
+    except:
+        return
+    else:
+        return s3
+
+def save_image(img, file_name, url):
     '''
     이미지 파일을 png로 저장
     '''
-    image = Image.open(io.BytesIO(base64.b64decode(img.split(",",1)[0])))
-    png_payload = {
-        "image": "data:image/png;base64," + img
-    }
-    response2 = requests.post(url=f'{url}/sdapi/v1/png-info', json=png_payload)
-    pnginfo = PngImagePlugin.PngInfo()
-    pnginfo.add_text("parameters", response2.json().get("info"))
-    image.save(f'NiNi/static/image/{file_name}.png', pnginfo=pnginfo)
+    s3 = s3_connection()
 
-if __name__ == "__main__":
-    url = "http://127.0.0.1:7860"
-    doc = {
-        "00": "00",
-        "01": "01",
-        "02": "00",
-        "03": "01",
-        "04": "01",
-        "05": "01",
-        "06": "00",
-        "07": "00",
-        "08": "00"
-    } #임의로 들어간 데이터
-    checkpoints, pos_prompt, neg_prompt, steps, cfg_scale = get_data(doc)
+    if s3:
+        image = Image.open(io.BytesIO(base64.b64decode(img.split(",",1)[0])))
+        png_payload = {
+            "image": "data:image/png;base64," + img
+        }
+        response2 = requests.post(url=f'{url}/sdapi/v1/png-info', json=png_payload)
+        pnginfo = PngImagePlugin.PngInfo()
+        pnginfo.add_text("parameters", response2.json().get("info"))
+        image.save(f'static/image/{file_name}.png', pnginfo=pnginfo)
+
+        try:
+            s3.upload_file(f"static/image/{file_name}.png","nini-tiny-enchanter-bucket",f"{file_name}.png")
+        except:
+            return "S3 Image Upload Error"
+        else:
+            return f"https://nini-tiny-enchanter-bucket.s3.amazonaws.com/{file_name}.png"
+    else:
+        return "S3 Connection Error"
     
-    for checkpoint in checkpoints:
-        i = checkpoints.index(checkpoint) + 1
-        draw_image(url, checkpoint, pos_prompt, neg_prompt, steps, cfg_scale, file_name=f'result_{i}')
+def generate_file_name(doc, imgno):
+    '''
+    이미지 파일 이름 반환
+    YYYYMMDDhhmmss-(체크박스 조합).png
+    '''
+    formatted_datetime = datetime.now().strftime("%Y%m%d%H%M%S")
+    checkbox_combination = "".join(list(doc.values()))
+    image_num = f"0{imgno}" if imgno < 10 else f"{imgno}"
+    
+    return f"{formatted_datetime}-{checkbox_combination}{image_num}"

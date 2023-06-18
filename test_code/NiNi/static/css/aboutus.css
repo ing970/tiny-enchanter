@@ -113,118 +113,60 @@ body {
     top: 18.33vh;
     left: 5.29vw;
 }
-  
-.stablediffusion {
+
+.profile-img{
     position: absolute;
-    width: 15.74vw;
-    height: 16.29vh;
-    top: 10.18vh;
-    left: 0.49vw;
+    width: 59.52vw;
+    height: 45.82vh;
+    left: 15.25vw;
+}
+
+.profile {
+    position: absolute;
+    width: 59.52vw;
+    height: 45.82vh;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.profile-title {
+    position: absolute;
+    width: 60vw;
+    height: 16.6vh;
+    top: -1.56vh;
+    left: 15.25vw;
+    font-family: "GoryeongStrawberry";
     font-size: 4.23vw;
+    display: inline-block;
+    color: #000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.title-text {
+    position: absolute;
+    left: 12.89vw;
+}
+
+.profile-paragraph {
+    position: relative;
+    width: 60vw;
+    top: 50vh;
+    left: 15.25vw;
+    font-family: 'SpoqaHanSansNeo-Regular';
+    font-size: 2.11vw;
+    line-height: 100%;
     display: inline-block;
     color: #014656;
 }
-  
-.stable {
+
+.profile-paragraph-1-1, .profile-paragraph-3-2 {
+    font-family: 'GoryeongStrawberry';
+}
+
+.profile-paragraph-2-2, .profile-paragraph-2-4 {
+    font-weight: bold;
+    color: #F6A801;
+}
+
+.about-us-text {
     margin: 0;
-}
-  
-.icon1 {
-    position: absolute;
-    width: 20.73vw;
-    height: 3.54vh;
-    top: 28.51vh;
-    left: -0.85vw;
-}
-  
-.text {
-    position: absolute;
-    width: 36.38vw;
-    height: 19.56vh;
-    top: 34.62vh;
-    left: 0.49vw;
-    font-size: 1.59vw;
-    letter-spacing: 5%;
-    display: inline-block;
-    color: #211919;
-    line-height: 3.26vh;
-}
-  
-.icon2 {
-    position: absolute;
-    width: 5.12vw;
-    height: 9.91vh;
-    top: 53.97vh;
-    left: 21.16vw;
-}
-  
-.getstarted {
-    position: absolute;
-    width: 15.79vw;
-    height: 7.55vh;
-    top: 61.07vh;
-    left: 0.13vw;
-    text-decoration: none;
-    cursor: pointer;
-    color: inherit;
-}
-  
-.getstarted-box {
-    position: absolute;
-    width: 14.15vw;
-    height: 5.5vh;
-    top: 0.7vh;
-    left: 1.15vw;
-    background-color: #f6a801;
-}
-  
-.get-started {
-    position: absolute;
-    width: 11.11vw;
-    height: 2.95vh;
-    top: 2.12vh;
-    left: 2.61vw;
-    font-weight: 700;
-    display: inline-block;
-    line-height: 3.06vh;
-}
-  
-.getstarted-item {
-    position: absolute;
-    width: 15.99vw;
-    height: 7.85vh;
-    top: -0.15vh;
-    left: -0.1vw;
-}
-  
-.icon3 {
-    position: absolute;
-    width: 8.16vw;
-    height: 70.37vh;
-    left: 72.38vw;
-}
-  
-.icon4 {
-    position: absolute;
-    width: 7.76vw;
-    height: 44.73vh;
-    top: 10.35vh;
-    left: 82.19vw;
-}
-  
-.image {
-    position: absolute;
-    width: 39.09vw;
-    height: 60.19vh;
-    top: 4.79vh;
-    left: 43.52vw;
-    border-radius: 4%;
-}
-  
-.icon5 {
-    position: absolute;
-    width: 7.62vw;
-    height: 10.37vh;
-    top: 1.53vh;
-    left: 40.87vw;
-}
+  }
