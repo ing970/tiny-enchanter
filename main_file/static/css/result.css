@@ -47,9 +47,9 @@ body {
     position: absolute;
     width: 6.22vw;
     height: 9.57vh;
-    top: 0;
-    left: 0;
-    border-radius: 100px;
+    top: -0.5vh;
+    left: 2vw;
+    border-radius: 10px;
 }
 
 .btn-nini {

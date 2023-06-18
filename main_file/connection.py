@@ -68,10 +68,10 @@ async def image_generate(request: Request):
     txts = list(json.loads(txts_b).values())
 
     url = "http://127.0.0.1:7860"
-    # url = "http://0.0.0.0:7860"
     img_no = txts[0]
     doc = txts[1]
-    checkpoint = txts[2]
+    # checkpoint = txts[2]
+    checkpoint = "qteamixQ_gamma"
     pos_prompt, neg_prompt, steps, cfg_scale = model.get_data(doc)
     pos_prompt += ", " + txts[3]
     file_name = model.generate_file_name(doc, img_no)
@@ -79,7 +79,7 @@ async def image_generate(request: Request):
     try:
         model_response = model.draw_image(url, checkpoint, pos_prompt, neg_prompt, steps, cfg_scale, file_name=file_name)
         if model_response.startswith('https'):
-            return Response(content=json.dumps({"filelink": model_response}), status_code=200)
+            return Response(content=json.dumps({"filename": file_name, "filelink": model_response}), status_code=200)
         else:
             return Response(content=json.dumps({"detail": model_response}), status_code=404)
     except:
@@ -90,5 +90,5 @@ async def home(request: Request):
     return templates.TemplateResponse("wrong.html", {"request": request})
 
 if __name__ == '__main__':
-    uvicorn.run("connection:app", reload=True)
+    uvicorn.run("connection:app", host="0.0.0.0", reload=True)
 # uvicorn connection:app --reload

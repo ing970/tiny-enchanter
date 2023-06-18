@@ -35,7 +35,7 @@ def draw_image(url, checkpoint, pos_prompt, neg_prompt, steps, cfg_scale, width=
         if download_link.startswith("https"):
             with pymysql.connect(host='nini.ccggztrbdcst.us-east-2.rds.amazonaws.com', user='admin', password='nini2023', db='NINI', charset='utf8') as conn: #password 입력 필요
                 sql = "INSERT INTO result (Image) VALUES (%s)"
-                execute_query(conn, sql, (i,))
+                execute_query(conn, sql, download_link)
 
     return download_link
 
