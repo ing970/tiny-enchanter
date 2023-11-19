@@ -1,14 +1,63 @@
 # tiny-enchanter
 
+## 1️⃣ 프로젝트 정보
 - 팀 명: nini
 - 서비스 이름: 꼬마 마법사 (tiny-enchanter)
 - 이름의 의미: "Tiny Enchanter"는 '작은 마법사' 또는 '매혹적인 작은 것을 만드는 사람'이라는 의미를 가질 수 있습니다. 
              이는 SD 케릭터를 만드는 저희 서비스에 대한 독특하고 매력적인 이름입니다.
-- 파이널 프로젝트 sample repository 입니다.
-- Stable diffusion 모델을 이용한 서비스 입니다.
 
-### 📍 로고이미지 예시
-<img src = "https://blog.kakaocdn.net/dn/bDFUXC/btsjnH1BZME/VQ1VvfNq6BxXIKFrlWzj90/img.png" width = "250" height = "250"/>
+## 2️⃣ 프로젝트 개요
+- Tiny Enchanter는 [프로젝트에 대한 간략한 소개]. 이 프로젝트는 [프로젝트의 목적 및 핵심 기능]을 제공합니다.
 
-### 📍 ERD
-<img src = "https://blog.kakaocdn.net/dn/mdxyK/btskhLiw60e/p9lQItiQiA7omRHyz4jXi0/img.png" width = "500" height = "500"/>
+## 3️⃣ 기능
+- 사용자 옵션 선택: `choice.html`을 통해 다양한 옵션을 제공하고 사용자 선택을 받습니다. 
+- 결과 표시: 사용자의 선택에 기반하여 결과를 `result.html` 페이지에서 보여줍니다.
+- 오류 처리: 잘못된 요청이나 오류를 `wrong.html` 페이지를 통해 사용자에게 알립니다.
+- 데이터베이스 관리: MySQL을 사용하여 사용자 데이터와 시스템 데이터를 관리합니다.
+
+## 4️⃣ 설치 방법
+- 소스 코드 복제: `git clone [레포지토리 URL]`
+- 필요한 라이브러리 설치: `pip install -r requirements.txt`
+- 서버 실행: `python tiny_enchanter.py`
+
+## 5️⃣ 사용 방법
+- 웹 브라우저에서 index.html을 열어 프로젝트의 홈페이지에 접속합니다.
+- 각 페이지의 지시에 따라 옵션을 선택하고 결과를 확인합니다.
+- 데이터베이스 관련 작업은 connection.py 스크립트를 통해 관리합니다.
+
+## 6️⃣ 프로젝트 구조 및 파일 설명
+### 📍 웹 인터페이스 파일
+- `index.html`: 프로젝트의 메인 페이지. 사용자에게 첫 인상을 제공합니다.
+- `aboutus.html`: 프로젝트 팀과 목표에 대한 정보를 제공합니다.
+- `choice.html`: 사용자가 옵션을 선택할 수 있는 인터페이스를 제공합니다.
+- `result.html`: 사용자의 선택에 따른 결과를 보여주는 페이지입니다.
+- `wrong.html`: 잘못된 요청이나 오류를 사용자에게 알리는 페이지입니다.
+
+### 📍 스타일링 파일
+- `choice.css`, `result.css`, `aboutus.css`: 각 HTML 파일에 대한 스타일 정의를 포함합니다.
+
+### 📍 백엔드 및 데이터 처리
+- `connection.py`: 서버 및 데이터 처리 로직을 담당합니다.
+- `tiny_enchanter.py`: 프로젝트의 핵심 알고리즘과 기능을 구현합니다.
+  
+### 📍 데이터베이스 설계 파일
+- `NINI_category.sql`, `NINI_client_order.sql` 등: 데이터베이스 구조 및 쿼리 정의를 포함합니다.
+
+## 7️⃣ 사용된 기술 및 프레임워크
+이 프로젝트는 HTML, CSS, JavaScript, Python(FastAPI), 그리고 MySQL을 사용합니다. 각 기술은 프로젝트의 다양한 측면을 담당합니다.
+
+- HTML/CSS: 사용자 인터페이스의 구조와 디자인을 담당합니다.
+- JavaScript: 인터랙티브한 웹 경험을 제공합니다.
+- Python(FastAPI): 서버 사이드 로직과 데이터 처리를 관리합니다.
+- MySQL: 데이터 저장 및 관리를 위한 데이터베이스 시스템입니다.
+
+## 8️⃣ 데이터베이스 설계 및 ERD
+프로젝트의 데이터베이스 설계는 아래 ERD를 참조하십시오. ERD는 프로젝트의 데이터 구조를 시각적으로 표현하고, 각 테이블과 그 관계를 설명합니다.
+
+![ERD Image]
+
+### 📍 ERD 설계 상세
+- Category: 서비스의 다양한 카테고리를 나타냅니다.
+- Client_Order: 사용자 주문 정보를 저장합니다.
+- Error: 시스템 오류 및 예외를 기록합니다.
+- [추가적인 테이블 및 관계에 대한 설명]
