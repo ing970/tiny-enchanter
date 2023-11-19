@@ -57,7 +57,13 @@
 ![ERD Image]
 
 ### 📍 ERD 설계 상세
-- Category: 서비스의 다양한 카테고리를 나타냅니다.
-- Client_Order: 사용자 주문 정보를 저장합니다.
-- Error: 시스템 오류 및 예외를 기록합니다.
-- [추가적인 테이블 및 관계에 대한 설명]
+- category 테이블: 서비스에서 사용되는 다양한 카테고리를 분류합니다. 각 카테고리는 고유한 `Category_id`를 가지며, 카테고리의 이름을 `Category_name` 필드에 저장합니다.
+- checkbox 테이블: 사용자에게 표시되는 체크박스 항목을 관리합니다. 각 체크박스는 고유한 `Checkbox_id`를 가지고, 해당하는 `Category_id`를 외래 키로 사용하여 category 테이블에 연결됩니다. 체크박스는 선택될 때와 선택되지 않을 때 표시되는 프롬프트인 `Checkbox_p_prompt`와 `Checkbox_n_prompt`를 가집니다.
+- checkpoint_model 테이블: 사용자의 진행 상태나 특정 지점을 모델링하는 체크포인트를 관리합니다. `Cp_model_id`는 각 체크포인트 모델의 고유 식별자이며, `Cp_model_name` 필드에 모델의 이름이 저장됩니다.
+- client_order 테이블: 사용자의 주문을 관리합니다. 각 주문은 `Serial_id`로 구분되며, `Serial_type`은 주문 유형을 나타냅니다. 주문은 `Checkbox_id`를 통해 사용자가 선택한 체크박스 옵션과 연결됩니다.
+- result 테이블: 생성된 결과의 정보를 저장합니다. No는 결과의 고유 식별자이며, Image 필드는 생성된 이미지의 경로를 저장합니다. `Created_at`은 결과가 생성된 시간을 기록합니다.
+
+### 📍 ERD 다이어그램
+<img src="https://github.com/ing970/tiny-enchanter/assets/120775224/05d6262e-d6c0-4dec-aafa-18dff47751bb" width="470">
+
+- 이 ERD는 테이블 간의 관계를 명확하게 보여주며, 데이터베이스의 설계와 흐름을 이해하는 데 도움을 줍니다. 각 테이블은 서로 연결되어 사용자의 경험과 데이터 흐름을 지원합니다.
