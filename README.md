@@ -7,7 +7,10 @@
              이는 SD 케릭터를 만드는 저희 서비스에 대한 독특하고 매력적인 이름입니다.
 <br></br>
 ## 2️⃣ 프로젝트 개요
-- Tiny Enchanter는 [프로젝트에 대한 간략한 소개]. 이 프로젝트는 [프로젝트의 목적 및 핵심 기능]을 제공합니다.
+- Tiny Enchanter는 창작의 장벽을 낮추어 모든 사람들이 쉽게 자신의 창의력을 발휘할 수 있게 하는 것입니다.
+- 우리는 사용자가 시간이나 비용의 부담 없이, 그리고 복잡한 학습 과정 없이도 자신만의 SD(Super Deformed) 캐릭터를 만들 수 있는 환경을 제공합니다.
+
+
 <br></br>
 ## 3️⃣ 기능
 - 사용자 옵션 선택: `choice.html`을 통해 다양한 옵션을 제공하고 사용자 선택을 받습니다. 
@@ -16,7 +19,7 @@
 - 데이터베이스 관리: MySQL을 사용하여 사용자 데이터와 시스템 데이터를 관리합니다.
 <br></br>
 ## 4️⃣ 설치 방법
-- 소스 코드 복제: `git clone [레포지토리 URL]`
+- 소스 코드 복제: `git clone https://github.com/ing970/tiny-enchanter.git`
 - 필요한 라이브러리 설치: `pip install -r requirements.txt`
 - 서버 실행: `python tiny_enchanter.py`
 <br></br>
